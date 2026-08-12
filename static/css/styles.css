@@ -1,0 +1,281 @@
+
+/*CUERPO PRINCIPAL DE TODAS LAS PAGINAS*/
+body {
+    /*Color del body*/
+    background-color:   #b7d4e6;
+    margin: 0;
+    overflow: hidden;
+}
+
+
+/*------------------------------------------------------------------------*/
+
+/*ESTILOS DE LA PAGINA DEL INICIO*/
+
+header {
+    /*Posición del header*/
+    position:fixed;
+    left: 0vw;
+    top: 0vh;
+    right: 0vw;
+    height: 13vh;
+    
+    /*Posición del contenido del header*/
+    display: flex;
+    gap: 2%;
+
+    /*Color del contenido del header*/
+    background-color: #0D2B45;
+}
+
+header h1{      
+    /*Posición del <h1> dentro del header*/
+    margin-top: auto;
+    margin-bottom: auto;
+
+    /*Diseño del <h1> dentro del header*/
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6em;
+    color: white;
+}
+
+/*Posición y diseño del boton */
+#volver{
+    /*Posición y estructura*/
+    margin-left: auto;          
+    margin-top: auto;          
+    margin-bottom: auto;        
+    margin-right: 2%;    
+    padding: 15px;
+
+    /*Diseño del boton*/
+    font-family: 'Montserrat' sans-serif;
+    border: none;
+    background-color: #0D2B45;
+    color: white;
+    font-size: 1.75em;
+    cursor: pointer;
+} 
+
+#mainInicio{
+    /*Posición del main de inicio*/
+    position: fixed;
+    top: 13vh;
+    left: 0vw;
+    right: 40vw;
+    bottom: 0vh;
+
+}
+
+#hero{
+    /*posición de la section de inicio*/
+    position: fixed;
+    right: 40%;
+    left: 0%;
+    height: 100%;
+
+    /*Organización del contenido del section de inicio*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hero p{
+    /*Tamaño, diseño y distribución del <p> dentro de la section de inicio*/
+    font-size: large;
+    margin-top: 7%;
+    width: 50%;
+    text-align: justify;
+}
+
+#hero h2{
+    /*Tamaño, diseño y distribución del <h2> dentro de la section de inicio*/
+    margin-top: 5vw;
+}
+
+#hero button{
+    /*Posición del botón dentro de la section de inicio*/
+    margin-top: 7%;
+    width: 25%;
+    height: 7%;
+
+    /*Diseño del botón y su contenido dentro de la section de inicio*/
+    border: none;
+    border-radius: 30px;
+    background-color: #0D2B45;
+    color: white;
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+#imagenInicio {
+    /*Posición del aside de inicio*/
+    position: fixed;
+    top: 13vh;
+    right: 0vw;
+    left: 60vw;
+    bottom: 0vh;
+
+    /*Posición del contenido del aside de inicio*/
+    display: flex;
+}
+
+#imagenInicio img{
+    /*Tamaño de la imagen de inicio*/
+    width: 100vw;
+    bottom: 100vh;
+    
+
+}
+
+
+#footerInicio{
+    position:fixed;
+    bottom: 0vh;
+    left: 0vw;
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+/*ESTILOS DE LA PANTALLA DEL LOGIN*/
+
+/*Estructura principal de la pantalla login*/
+#mainLogin{
+    display: flex;     
+    position: fixed; 
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20vh;
+    min-width: 100vw;
+}
+/*Diseño de la seccion de login*/
+#login {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    width: 100vw;
+    height: 300px;
+    max-width: 400px;
+    border: 4px solid #0D2B45;
+}
+/*Diseño del título de login*/
+#mainLogin #inicioSesion {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #0D2B45;
+}
+/*Estructura y diseño del formulario de login*/
+#login form {
+    /*Estructura del formulario*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /*Diseño del formulario*/
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    gap: 30px; 
+    padding:20px;
+    font-size: 20px;
+}
+/*Diseño de los campos de texto*/
+#login input {
+    width: 100%;
+    height: 25px;
+    font-size: 15px;
+}
+/*Diseño del botón de login*/
+#login button {
+    background-color: #0D2B45;
+    color: #ffffff;
+    padding: 11px;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Montserrat' sans-serif;
+    border:none;
+}
+
+/*----------------------------------------------------------------------------------*/
+
+/*ESTILOS DE LA PANTALLAS PIRNCIPALES*/
+
+/* Diseño y estructura de la pantalla principal */
+#menu {
+    margin-top: 20vh;
+    max-height: calc(100vh-20vh-10vh);
+    overflow-y: auto;
+    
+
+    
+    display: flex;
+    min-height: 83vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.boton-opcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+}
+
+.boton-opcion img {
+    width: auto;
+    height: 16vh;
+    margin-bottom: 20px;
+}
+
+.boton-opcion span{
+    height: 5vh;
+    color: #0D2B45;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.Principal {
+    position: fixed;
+    bottom: 0vh;
+    left: 0vw;
+    right: 0vw;
+    height: 10vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    background-color: #b7d4e6;
+}
+
+.Principal.atribucion{
+    margin-top: -2vh;
+}
+
+/*-------------------------------------------------------------------*/
+
+#mainDesarrollo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    height: calc(100vh - 13vh);
+    margin-top: 13vh;
+    
+    text-align: center; 
+    padding: 0 20px;    
+    
+
+}
+
