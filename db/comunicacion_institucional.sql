@@ -11,7 +11,8 @@ CREATE TABLE IF NOT EXISTS usuarios (
 
     correo_electronico VARCHAR(255) PRIMARY KEY,
     contrasenia VARCHAR(100),
-    nombre VARCHAR(100)
+    nombre VARCHAR(100),
+    rol VARCHAR(20)
 
 );
 
@@ -44,7 +45,7 @@ CREATE TABLE IF NOT EXISTS dias (
 
 CREATE TABLE IF NOT EXISTS clases (
 
-    identificador INT PRIMARY KEY,
+    identificador INT AUTO_INCREMENT PRIMARY KEY,
     hora_inicio TIME,
     hora_fin TIME,
     nombre_dia VARCHAR(10),
@@ -81,7 +82,7 @@ CREATE TABLE IF NOT EXISTS docentes (
 
 CREATE TABLE IF NOT EXISTS notificaciones(
 
-    identificador INT PRIMARY KEY,
+    identificador INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100),
     descripcion VARCHAR(255),
     publico VARCHAR(20)
