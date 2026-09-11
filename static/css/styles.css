@@ -14,7 +14,6 @@ body {
 
 header {
     /*Posición del header*/
-    position:fixed;
     left: 0vw;
     top: 0vh;
     right: 0vw;
@@ -38,6 +37,55 @@ header h1{
     font-size: 1.6em;
     color: white;
 }
+
+/*---------------------------------------------*/
+
+/*ESTILOS PARA EL BOTÓN DESPLEGABLE DEL HEADER*/
+#menuHeader {
+    /*Posición del menú(<ul>) dentro del header*/
+    margin-left: auto;
+    margin-right: 1%;
+    margin-top: 1.25%;
+    margin-bottom: 1%;
+
+    /*Distribución dentro del menú(<ul>) dentro del header*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1%;
+    padding:0%;
+
+    /*Estilo del menú(<ul>) dentro del header*/
+    list-style: none;
+}
+
+
+#menuHeader button{
+    /*Tamaño del botón del menú*/
+    height: 8vh;
+    width: 4vw;
+}
+
+#menuHeader * {
+    /*Distribución de cada <li> dentro del menú*/
+    margin:0;
+    padding:0;
+    /*Estilo de cada <li> dentro del menú*/
+    list-style: none;
+    background-color: #ffffff;
+}
+
+#menuHeader ul * {
+    /*Distribución del contenido dentro del <ul> hijo del menú*/
+    padding: 5%;
+}
+
+/*Una clase aplicable a cualquier elemento, destinada para hacer desaparecer al mismo*/
+.oculto {
+    display:none;
+}
+
+/*---------------------------------------------*/
 
 /*Posición y diseño del boton */
 #volver{
@@ -107,26 +155,6 @@ header h1{
     font-size: 25px;
 
     cursor: pointer;
-}
-
-#imagenInicio {
-    /*Posición del aside de inicio*/
-    position: fixed;
-    top: 13vh;
-    right: 0vw;
-    left: 60vw;
-    bottom: 0vh;
-
-    /*Posición del contenido del aside de inicio*/
-    display: flex;
-}
-
-#imagenInicio img{
-    /*Tamaño de la imagen de inicio*/
-    width: 100vw;
-    bottom: 100vh;
-    
-
 }
 
 
