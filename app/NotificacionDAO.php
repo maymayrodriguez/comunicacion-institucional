@@ -3,17 +3,26 @@
     require_once 'conexion.php';
 
     //Código de consulta de prueba
+    /*
     $identificador = 13;
     $nombre = "Notificación de prueba";
     $descripcion = "Esta es una notificación de prueba";
-    $publico = "3MC";
+    $publico = "3MC";*/
+    $notificacion = new Notificacion(14,"Notificacion de prueba 2","pepepablo","todos");
+    
+    function insertarNotificacion (Notificacion $notificacion){
+    
+    $identificador = $notificacion->getIdentificador();
+    $nombre = $notificacion->getNombre();
+    $descripcion = $notificacion->getDescripcion();
+    $publico = $notificacion->getPublico();
     
     $sqlInsert = "INSERT INTO notificaciones (identificador, nombre, descripcion, publico) VALUES (?, ?, ?, ?)";  
 
     $sentencia = $conexion->prepare($sqlInsert);
     $sentencia->bind_param("isss", $identificador, $nombre, $descripcion, $publico);
     $sentencia ->execute();
-
+    }
 
 
     $sqlSelect = "SELECT * FROM notificaciones";
