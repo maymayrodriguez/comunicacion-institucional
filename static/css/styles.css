@@ -78,6 +78,8 @@ header h1{
 #menuHeader ul * {
     /*Distribución del contenido dentro del <ul> hijo del menú*/
     padding: 5%;
+    border-radius: 2px;
+    border-color: #0D2B45;
 }
 
 /*Una clase aplicable a cualquier elemento, destinada para hacer desaparecer al mismo*/
@@ -156,7 +158,6 @@ header h1{
 
     cursor: pointer;
 }
-
 
 #footerInicio{
     position:fixed;
