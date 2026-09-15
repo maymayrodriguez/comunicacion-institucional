@@ -1,7 +1,8 @@
 <?php
+
+    require_once 'conexion.php';
+    require_once 'NotificacionEntidad.php';
     class NotificacionDAO {
-        require_once 'conexion.php';
-        require_once 'NotificacionEntidad.php';
 
         //Código de consulta de prueba
         /*
