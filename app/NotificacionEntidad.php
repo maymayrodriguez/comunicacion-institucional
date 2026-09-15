@@ -1,5 +1,5 @@
 <?php
-class notificacion{
+class NotificacionEntidad{
     private int $identificador;
     private String $nombre;
     private String $descripcion;
