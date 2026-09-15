@@ -26,11 +26,22 @@ if (loginButton){
 //Guarda el botón en una constante
 const botonMenu = document.querySelector("#menuHeader button");
 if (botonMenu){
+    //Guarda el <ul> hijo del menú 
+    let menuDesplegable = document.querySelector("#menuHeader ul");
+
     //Agrega un evento de "Click" al botón
     botonMenu.addEventListener("click", () => {
-        //Guarda el <ul> hijo del menú 
-        let menuDesplegable = document.querySelector("#menuHeader ul");
         //Asigna o quita la clase "oculto" al elemento, lo hace cada vez que se presiona el botón.
         menuDesplegable.classList.toggle("oculto");
+
+    });
+    //Agrega un evento "Click" para que cuando se presione fuera del botón, se cierre el menú desplegable
+    document.addEventListener("click", (clickFuera) => {
+        //Si el evento "Click" no es sobre el botón del menú ejecuta
+        if (!botonMenu.contains(clickFuera.target)){
+            //cambia la clase del menú para que se oculte
+            menuDesplegable.classList.add("oculto");
+
+        }
     });
 }
