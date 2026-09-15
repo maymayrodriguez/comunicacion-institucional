@@ -2,6 +2,8 @@
 
     require_once 'conexion.php';
     require_once 'NotificacionEntidad.php';
+
+
     class NotificacionDAO {
 
         //Código de consulta de prueba
@@ -10,8 +12,9 @@
         $nombre = "Notificación de prueba";
         $descripcion = "Esta es una notificación de prueba";
         $publico = "3MC";*/
+        function crearNotificacion(){
         $notificacion = new NotificacionEntidad(14,"Notificacion de prueba 2","pepepablo","todos");
-        
+        }
         function insertarNotificacion (NotificacionEntidad $notificacion){
         
             $identificador = $notificacion->getIdentificador();
