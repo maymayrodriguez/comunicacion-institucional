@@ -37,7 +37,7 @@
         }
 
 
-        $sqlSelect = "SELECT * FROM notificaciones";
+        /*$sqlSelect = "SELECT * FROM notificaciones";
         $resultado = $conexion->query($sqlSelect);
 
         while ($fila = $resultado->fetch_assoc()) {
@@ -45,8 +45,9 @@
             echo "Nombre: " . $fila["nombre"] . "<br>";
             echo "Descripción: " . $fila["descripcion"] . "<br>";
             echo "Público: " . $fila["publico"] . "<br><br>";
-        }
+        }*/
 
-        $conexion->close();
+        
     }
+    $conexion->close();
 ?>
