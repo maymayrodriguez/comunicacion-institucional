@@ -2,7 +2,7 @@
 
     require_once 'conexion.php';
 
-    $sql = "SELECT * FROM notificacion";
+    $sql = "SELECT * FROM notificaciones";
     $resultado = $conexion->query($sql);
 
     while ($fila = $resultado->fetch_assoc()) {
