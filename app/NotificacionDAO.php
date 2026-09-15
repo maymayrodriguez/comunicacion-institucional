@@ -8,7 +8,7 @@
 
     $notificacionDAO = new NotificacionDAO();
 
-    $notificacionDAO->insertarNotificacion($notificacion);
+    $notificacionDAO->insertarNotificacion($notificacion, $conexion);
 
 
     
@@ -22,7 +22,7 @@
         $publico = "3MC";*/
        
         
-        function insertarNotificacion (NotificacionEntidad $notificacion){
+        function insertarNotificacion ($notificacion, $conexion){
         
             $identificador = $notificacion->getIdentificador();
             $nombre = $notificacion->getNombre();
