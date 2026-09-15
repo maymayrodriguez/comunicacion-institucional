@@ -1,7 +1,7 @@
 <?php
     class NotificacionDAO {
         require_once 'conexion.php';
-        require_once "NotificacionEntidad.php"
+        require_once 'NotificacionEntidad.php';
 
         //Código de consulta de prueba
         /*
@@ -13,16 +13,16 @@
         
         function insertarNotificacion (NotificacionEntidad $notificacion){
         
-        $identificador = $notificacion->getIdentificador();
-        $nombre = $notificacion->getNombre();
-        $descripcion = $notificacion->getDescripcion();
-        $publico = $notificacion->getPublico();
-        
-        $sqlInsert = "INSERT INTO notificaciones (identificador, nombre, descripcion, publico) VALUES (?, ?, ?, ?)";  
+            $identificador = $notificacion->getIdentificador();
+            $nombre = $notificacion->getNombre();
+            $descripcion = $notificacion->getDescripcion();
+            $publico = $notificacion->getPublico();
+            
+            $sqlInsert = "INSERT INTO notificaciones (identificador, nombre, descripcion, publico) VALUES (?, ?, ?, ?)";  
 
-        $sentencia = $conexion->prepare($sqlInsert);
-        $sentencia->bind_param("isss", $identificador, $nombre, $descripcion, $publico);
-        $sentencia ->execute();
+            $sentencia = $conexion->pskrepare($sqlInsert);
+            $sentencia->bind_param("isss", $identificador, $nombre, $descripcion, $publico);
+            $sentencia ->execute();
         }
 
 
