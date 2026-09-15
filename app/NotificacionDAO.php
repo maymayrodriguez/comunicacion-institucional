@@ -31,7 +31,7 @@
             
             $sqlInsert = "INSERT INTO notificaciones (identificador, nombre, descripcion, publico) VALUES (?, ?, ?, ?)";  
 
-            $sentencia = $conexion->pskrepare($sqlInsert);
+            $sentencia = $conexion->prepare($sqlInsert);
             $sentencia->bind_param("isss", $identificador, $nombre, $descripcion, $publico);
             $sentencia ->execute();
         }
