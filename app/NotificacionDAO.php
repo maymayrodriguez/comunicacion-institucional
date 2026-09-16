@@ -4,15 +4,14 @@
     require_once 'NotificacionEntidad.php';
 
 
-    /*
-
-    $notificacionDAO = new NotificacionDAO($conexion);
-
-    $notificacionDAO->insertarNotificacion($notificacion, $conexion);
-*/
-
+    
     $notificacion = new NotificacionEntidad(15,"Notificacion de prueba 3","Esta es una notificación de prueba","Restringido");
     
+    $conexion = new Conexion();
+    $notificacionDAO = new NotificacionDAO($conexion);
+
+    $notificacionDAO->insertarNotificacion($notificacion);
+    $notificacionDAO->obtenerNotificaciones();
     
     class NotificacionDAO {
 
@@ -43,11 +42,11 @@
             $sentencia ->execute();
 
             $sentencia->close();
-            $conexion->close();
+            $this->conexion->cerrarConexion();
             
         }
 
-        function  obtenerNotificaciones (Conexion $conexion) {
+        function  obtenerNotificaciones () {
 
             $sql = "SELECT identificador, nombre, descripcion, publico FROM notificaciones";
 
@@ -62,11 +61,12 @@
                 echo "Público: " . $fila["publico"] . "<br><br>";
             }
 
+            $this->conexion->cerrarConexion();
+
         }
 
 
         
     }
 
-    $conexion->close();
 ?>
