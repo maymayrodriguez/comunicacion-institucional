@@ -1,0 +1,22 @@
+<?php
+
+require_once 'NotificacionEntidad.php';
+require_once 'NotificacionDAO.php';
+
+class NotificacionLogica{
+
+    function crearNotificacion (int $id, string $nombre, string $descripcion, string $publico): boolean{
+
+        $notificacion = new NotificacionEntidad($id, $nombre, $descripcion, $publico);  
+
+        $notificacionDAO = new NotificacionDAO();
+
+        $notificacionDAO->insertarNotificacion($notificacion);
+
+        return true;
+        
+    }
+
+    }
+
+?>
