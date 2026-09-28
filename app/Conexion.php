@@ -44,7 +44,7 @@ class Conexion {
     }
 
     // Reescribir el método clone y hacerlo privado
-    private function __clone(): void{
+    private function __clone(){
     }
 
 }
