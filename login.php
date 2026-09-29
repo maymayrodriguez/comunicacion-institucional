@@ -1,32 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <link rel="icon" type="image/x-icon" href="/static/img/logo.png">
-
-    <title>Login</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    
-</head>
-<body>
-    <!--Encabezado de la página de login-->
-    <header>
-
-        <img src="/static/img/logo.png" alt="Logo del sitio">
-
-        <h1>Sistema de comunicación institucional</h1>
-        
-        <button id="volver" onclick="location.href='index.html'">Volver</button>
-        
-        
-    </header>
     <!--Cuerpo principal de la página de login-->
     <main id="mainLogin">
         
@@ -56,6 +29,6 @@
     </footer>
 
     </main>
-    <script src="/static/js/script.js"></script>
-</body>
+     
+
 </html>

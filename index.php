@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Sistema de comunicación institucional</title>
-    <link rel="icon" type="image/x-icon" href="/static/img/logo.png">
+    <link rel="icon" href="/static/img/logo.png">
 
     <link rel="stylesheet" href="/static/css/styles.css">
 
@@ -28,12 +28,12 @@
             <li><button>Menú</button></li>
             <li>
                 <ul class="oculto">
-                    <li>Horarios</li>
-                    <li>Calendario</li>
-                    <li>Grupos</li>
-                    <li>Noticias</li>
-                    <li>Iniciar Sesión</li>
-                    <li>Cerrar Sesión</li>
+                    <li><a id="horarios">Horarios</a></li>
+                    <li><a id="calendario">Calendario</a></li>
+                    <li><a id="grupos">Grupos</a></li>
+                    <li><a id="noticias">Noticias</a></li>
+                    <li><a id="iniciarSesionA">Iniciar Sesión</a></li>
+                    <li><a id="cerrarSesionA">Cerrar Sesión</a></li>
                 </ul>
             </li>
         </ul>
@@ -48,7 +48,7 @@
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ratione officia possimus suscipit aspernatur amet velit fuga magnam dicta reprehenderit illum, quibusdam laboriosam sequi quas dolor quae ullam molestiae nulla! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ullam laboriosam explicabo in repellendus quam accusantium reiciendis quidem consectetur, placeat rem dolorum exercitationem? Ratione quidem id, quas in unde laborum</p>
 
-            <button onclick="location.href='Login.html'">Inciar Sesion</button>
+            <button onclick="location.href='login.php'">Inciar Sesion</button>
 
         </section>
 

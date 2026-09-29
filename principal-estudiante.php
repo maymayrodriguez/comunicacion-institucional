@@ -18,7 +18,7 @@
 
         <h1>Sistema de comunicación institucional</h1>
 
-        <button id="volver" onclick="location.href='login.html'">Volver</button>
+        <button id="volver" onclick="location.href='index.php'">Volver</button>
 
         <!-- <button aria-label="abrir menú"> ≡ </button> -->
 
@@ -28,22 +28,22 @@
 
         <section id="menu">  
 
-            <a href="DesarrolloE.html" class="boton-opcion">
+            <a href="desarrolloE.php" class="boton-opcion">
                 <img src="/static/img/iconoCalendario.png" alt="icono de calendario">
                 <span>Calendario</span> 
             </a>
 
-            <a href="DesarrolloE.html" class="boton-opcion">
+            <a href="desarrolloE.php" class="boton-opcion">
                 <img src="/static/img/iconoHorarios.png" alt="icono de horario">
                 <span>Horario</span> 
             </a>
 
-            <a href="DesarrolloE.html" class="boton-opcion">
+            <a href="desarrolloE.php" class="boton-opcion">
                 <img src="/static/img/iconoNotificaciones.png" alt="icono de notificaciones">
                 <span>Notificaciones</span> 
             </a>
 
-            <a href="DesarrolloE.html" class="boton-opcion">
+            <a href="desarrolloE.php" class="boton-opcion">
                 <img src="/static/img/iconoPerfil.png" alt="icono de perfil">
                 <span>Perfil</span> 
             </a>
@@ -63,4 +63,4 @@
     </footer>
 
 </body>
-</html>
+</php>

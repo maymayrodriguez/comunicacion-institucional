@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +24,7 @@
 
         <h1>Sistema de comunicación institucional</h1>
         
-        <button id="volver" onclick="location.href='principal-estudiante.html'">Volver</button>
+        <button id="volver" onclick="location.href='principal-docente.php'">Volver</button>
         
         
     </header>
