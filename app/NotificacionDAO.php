@@ -16,6 +16,7 @@
 
         private Conexion $conexion;
             
+
         public function __construct(Conexion $conexion){
             
             $this->conexion = $conexion;
@@ -32,7 +33,7 @@
             
             $sql = "INSERT INTO notificaciones (identificador, nombre, descripcion, publico) VALUES (?, ?, ?, ?)";  
 
-            $conexion = $this->conexion; 
+            $conexion = $this->conexion.getConexion(); 
 
             $sentencia = $conexion->prepare($sql);
             $sentencia->bind_param("isss", $identificador, $nombre, $descripcion, $publico);
@@ -47,7 +48,7 @@
 
             $sql = "SELECT identificador, nombre, descripcion, publico FROM notificaciones";
 
-            $conexion = $this->conexion;
+            $conexion = $this->conexion.getConexion();
 
             $resultado = $conexion->query($sql);
 
