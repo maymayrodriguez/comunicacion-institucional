@@ -2,12 +2,11 @@
 
     require_once 'Conexion.php';
     require_once 'NotificacionEntidad.php';
-
-
     
+
     $notificacion = new NotificacionEntidad(15,"Notificacion de prueba 3","Esta es una notificación de prueba","Restringido");
     
-    $conexion = new Conexion();
+    $conexion = Conexion::getInstancia();
     $notificacionDAO = new NotificacionDAO($conexion);
 
     $notificacionDAO->insertarNotificacion($notificacion);
@@ -16,9 +15,7 @@
     class NotificacionDAO {
 
         private Conexion $conexion;
-
             
-        // Constructor con inyección de dependencia
         public function __construct(Conexion $conexion){
             
             $this->conexion = $conexion;
@@ -35,7 +32,7 @@
             
             $sql = "INSERT INTO notificaciones (identificador, nombre, descripcion, publico) VALUES (?, ?, ?, ?)";  
 
-            $conexion = $this->conexion->getConexion(); 
+            $conexion = $this->conexion; 
 
             $sentencia = $conexion->prepare($sql);
             $sentencia->bind_param("isss", $identificador, $nombre, $descripcion, $publico);
@@ -50,7 +47,7 @@
 
             $sql = "SELECT identificador, nombre, descripcion, publico FROM notificaciones";
 
-            $conexion = $this->conexion->getConexion();
+            $conexion = $this->conexion;
 
             $resultado = $conexion->query($sql);
 
