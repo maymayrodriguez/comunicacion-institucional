@@ -1,23 +1,28 @@
-const loginButton = document.getElementById("loginButton");
-if (loginButton){
-    loginButton.addEventListener("click", (e) => {
-        e.preventDefault();
+function inicializarLoginButton() {
+    const loginButton = document.getElementById("loginButton");
+    if (loginButton){
+        loginButton.addEventListener("click", (e) => {
+            e.preventDefault();
 
-    const UsuarioIngresado = document.getElementById("user").value;
-    const PasswordIngresado = document.getElementById("contrasena").value;
+        const UsuarioIngresado = document.getElementById("user").value;
+        const PasswordIngresado = document.getElementById("contrasena").value;
 
 
-    if (UsuarioIngresado === "Estudiante" && PasswordIngresado === "Estudiante") {
+        if (UsuarioIngresado === "Estudiante" && PasswordIngresado === "Estudiante") {
 
-        window.location.href = "principal-estudiante.html";
+            window.location.href = "principal-estudiante.php";
+        }
+        else if (UsuarioIngresado === "Docente" && PasswordIngresado === "Docente") {
+            window.location.href = "principal-docente.php";
+        }
+        else{
+            alert("Usuario o contraseña incorrectos. Por favor, inténtelo de nuevo.");
+        }
+        });
     }
-    else if (UsuarioIngresado === "Docente" && PasswordIngresado === "Docente") {
-        window.location.href = "principal-docente.html";
+    else {
+        console.log("loginButton no encontrado");
     }
-    else{
-        alert("Usuario o contraseña incorrectos. Por favor, inténtelo de nuevo.");
-    }
-    });
 }
 
 /*-------------------------------------------*/
@@ -44,4 +49,25 @@ if (botonMenu){
 
         }
     });
+}
+const horarios = document.querySelector("#horarios");
+const calendario = document.querySelector("#calendario");
+const grupos = document.querySelector("#grupos");
+const noticias = document.querySelector("#noticias");
+const iniciarSesionA = document.querySelector("#iniciarSesionA");
+const cerrarSesionA = document.querySelector("#cerrarSesionA");
+
+if (horarios && calendario && grupos && noticias && iniciarSesionA && cerrarSesionA){
+    iniciarSesionA.addEventListener("click", async () => {
+        const indexMain = document.querySelector("#mainInicio");
+
+        const respuestaLogin = await fetch("login.php");
+
+        const loginTexto = await respuestaLogin.text();
+
+        indexMain.innerHTML = loginTexto;
+        inicializarLoginButton();
+
+    });
+        
 }

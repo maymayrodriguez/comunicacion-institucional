@@ -5,9 +5,9 @@ require_once 'NotificacionDAO.php';
 
 class NotificacionLogica{
 
-    function crearNotificacion (int $id, string $nombre, string $descripcion, string $publico): boolean{
+    function crearNotificacion (int $identificador, string $nombre, string $descripcion, string $publico): boolean{
 
-        $notificacion = new NotificacionEntidad($id, $nombre, $descripcion, $publico);  
+        $notificacion = new NotificacionEntidad($identificador, $nombre, $descripcion, $publico);  
 
         $notificacionDAO = new NotificacionDAO();
 

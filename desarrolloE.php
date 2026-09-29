@@ -23,7 +23,7 @@
 
         <h1>Sistema de comunicación institucional</h1>
         
-        <button id="volver" onclick="location.href='principal-docente.html'">Volver</button>
+        <button id="volver" onclick="location.href='principal-estudiante.php'">Volver</button>
         
         
     </header>
