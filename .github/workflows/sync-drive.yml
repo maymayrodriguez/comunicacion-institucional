@@ -1,0 +1,25 @@
+name: Sincronizar Repo con Google Drive
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Empaquetar repositorio en ZIP
+        run: |
+          zip -r repositorio_develop.zip . -x "*.git*"
+
+      - name: Subir a Google Drive
+        uses: adrive/drive-upload-action@v2
+        with:
+          credentials: ${{ secrets.GDRIVE_SA_KEY }}
+          filename: 'repositorio_develop.zip'
+          folderId: ${{ secrets.GDRIVE_FOLDER_ID }}
+          overwrite: true
