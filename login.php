@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
+>
     <!--Cuerpo principal de la página de login-->
     <main id="mainLogin">
         
@@ -21,14 +20,4 @@
                 <button id="loginButton">Iniciar Sesión</button>
             </form>
         </section>
-    <!--Pie del formulario-->   
-    <footer>
-
-        <p>© 2026 Tecnoware. Todos los derechos reservados.</p>
-
-    </footer>
-
     </main>
-     
-
-</html>

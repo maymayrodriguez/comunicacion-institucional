@@ -44,12 +44,12 @@
 
     </main>
 
-   
+   <!--
     <footer>
 
         <p>© 2026 Tecnoware. Todos los derechos reservados.</p>
     
     </footer>
-
+-->
 </body>
 </html>
