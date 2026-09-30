@@ -125,3 +125,6 @@ if (horarios && calendario && grupos && notificaciones && iniciarSesionA && cerr
     });
         
 }
+else {
+    console.log("no funciona");
+}

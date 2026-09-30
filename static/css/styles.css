@@ -124,12 +124,37 @@ header h1{
 
 /*----------------------------------------------------------------------------------------*/
 
+/*ESTILOS DEL MAIN NOTIFICACIONES*/
+#mainNotificaciones{
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10%;
+    padding: 10%;
+    width: 100vw;
+    height: 100vh;
+
+}
+.contenedorNotificacion {
+
+    background-color: #ffffff;
+    margin-bottom: 7.5%;
+    margin-left: auto;
+    margin-right: 30%;
+    width: 50vw;
+    height: 35vh;
+
+    border-radius: 0 15px 15px 15px;
+}
+
+/*----------------------------------------------------------------------------------------*/
+
 /*ESTILOS DE LA PANTALLA DEL LOGIN*/
 
 /*Estructura principal de la pantalla login*/
 #mainLogin{
-    display: flex;     
-    position: fixed; 
+    display: flex; 
     justify-content: center;
     flex-direction: column;
     align-items: center;
