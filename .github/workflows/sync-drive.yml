@@ -17,9 +17,9 @@ jobs:
           zip -r repositorio_develop.zip . -x "*.git*"
 
       - name: Subir a Google Drive
-        uses: adrive/drive-upload-action@v2
+        uses: Jumbo810/Upload_Github_Artifacts_TO_GDrive@v2.3.5
         with:
+          target: "repositorio_develop.zip"
           credentials: ${{ secrets.GDRIVE_SA_KEY }}
-          filename: 'repositorio_develop.zip'
-          folderId: ${{ secrets.GDRIVE_FOLDER_ID }}
-          overwrite: true
+          parent_folder_id: ${{ secrets.GDRIVE_FOLDER_ID }}
+          override: true
