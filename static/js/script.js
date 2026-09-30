@@ -53,19 +53,73 @@ if (botonMenu){
 const horarios = document.querySelector("#horarios");
 const calendario = document.querySelector("#calendario");
 const grupos = document.querySelector("#grupos");
-const noticias = document.querySelector("#noticias");
+const notificaciones = document.querySelector("#notificaciones");
 const iniciarSesionA = document.querySelector("#iniciarSesionA");
 const cerrarSesionA = document.querySelector("#cerrarSesionA");
+const indexMain = document.querySelector("#mainInicio");
 
-if (horarios && calendario && grupos && noticias && iniciarSesionA && cerrarSesionA){
+
+if (horarios && calendario && grupos && notificaciones && iniciarSesionA && cerrarSesionA){
+
+    document.addEventListener("DOMContentLoaded", async () => {
+
+        const respuestaNotificaciones = await fetch ("notificaciones.php");
+
+        const notificacionesTexto = await respuestaNotificaciones.text();
+
+        indexMain.innerHTML = notificacionesTexto;
+
+    });
+
+    horarios.addEventListener("click", async () =>{
+
+        const respuestaHorarios = await fetch ("horarios.php");
+
+        const horarioTexto = await respuestaHorarios.text();
+
+        indexMain.innerHTML = horarioTexto;
+
+
+    });
+
+    calendario.addEventListener("click", async () => {
+
+        const respuestaCalendario = await fetch ("calendario.php");
+
+        const calendarioTexto = await respuestaCalendario.text();
+
+        indexMain.innerHTML = calendarioTexto;
+
+    });
+
+    grupos.addEventListener("click", async () => {
+
+        const respuestaGrupos = await fetch ("grupos.php");
+
+        const gruposTexto = await respuestaGrupos.text();
+
+        indexMain.innerHTML = gruposTexto;
+
+    });
+
+    notificaciones.addEventListener("click", async () => {
+
+        const respuestaNotificaciones = await fetch ("notificaciones.php");
+
+        const notificacionesTexto = await respuestaNotificaciones.text();
+
+        indexMain.innerHTML = notificacionesTexto;
+
+    });
+
     iniciarSesionA.addEventListener("click", async () => {
-        const indexMain = document.querySelector("#mainInicio");
-
+        
         const respuestaLogin = await fetch("login.php");
 
         const loginTexto = await respuestaLogin.text();
 
         indexMain.innerHTML = loginTexto;
+
         inicializarLoginButton();
 
     });

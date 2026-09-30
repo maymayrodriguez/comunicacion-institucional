@@ -31,7 +31,7 @@
                     <li><a id="horarios">Horarios</a></li>
                     <li><a id="calendario">Calendario</a></li>
                     <li><a id="grupos">Grupos</a></li>
-                    <li><a id="noticias">Noticias</a></li>
+                    <li><a id="notificaciones">Noticias</a></li>
                     <li><a id="iniciarSesionA">Iniciar Sesión</a></li>
                     <li><a id="cerrarSesionA">Cerrar Sesión</a></li>
                 </ul>
@@ -41,17 +41,6 @@
     </header>
 
     <main id="mainInicio">
-
-        <section id="hero"> 
-
-            <h2>Bienvenido</h2>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ratione officia possimus suscipit aspernatur amet velit fuga magnam dicta reprehenderit illum, quibusdam laboriosam sequi quas dolor quae ullam molestiae nulla! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ullam laboriosam explicabo in repellendus quam accusantium reiciendis quidem consectetur, placeat rem dolorum exercitationem? Ratione quidem id, quas in unde laborum</p>
-
-            <button onclick="location.href='login.php'">Inciar Sesion</button>
-
-        </section>
-
 
     </main>
 

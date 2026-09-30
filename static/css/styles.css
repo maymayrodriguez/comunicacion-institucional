@@ -115,47 +115,6 @@ header h1{
 
 }
 
-#hero{
-    /*posición de la section de inicio*/
-    position: fixed;
-    right: 40%;
-    left: 0%;
-    height: 100%;
-
-    /*Organización del contenido del section de inicio*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#hero p{
-    /*Tamaño, diseño y distribución del <p> dentro de la section de inicio*/
-    font-size: large;
-    margin-top: 7%;
-    width: 50%;
-    text-align: justify;
-}
-
-#hero h2{
-    /*Tamaño, diseño y distribución del <h2> dentro de la section de inicio*/
-    margin-top: 5vw;
-}
-
-#hero button{
-    /*Posición del botón dentro de la section de inicio*/
-    margin-top: 7%;
-    width: 25%;
-    height: 7%;
-
-    /*Diseño del botón y su contenido dentro de la section de inicio*/
-    border: none;
-    border-radius: 30px;
-    background-color: #0D2B45;
-    color: white;
-    font-size: 25px;
-
-    cursor: pointer;
-}
 
 #footerInicio{
     position:fixed;
@@ -237,7 +196,6 @@ header h1{
     max-height: calc(100vh-20vh-10vh);
     overflow-y: auto;
     
-
     
     display: flex;
     min-height: 83vh;

@@ -1,33 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Comunicación Institucional | Principal docente</title>
-
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <link rel="icon" type="image/x-icon" href="/static/img/logo.png">
-
-</head>
-
-<body>
-    
-    <header>
-
-        <img src="/static/img/logo.png" alt="Logo del sitio">
-
-        <h1>Sistema de comunicación institucional</h1>
-
-        <button id="volver" onclick="location.href='login.php'">Volver</button>
-
-        <!-- <button aria-label="abrir menú"> ≡ </button> -->
-
-    </header>
 
     <main>
 
-        <section id="menu">  
+        <section>  
             
             <a href="desarrollo.php" class="boton-opcion">
                 <img src="static/img/iconoHorarios.png" alt="icono de horarios">
@@ -58,15 +35,5 @@
 
     </main>
 
-    <footer class="Principal">
 
-        <p>© 2026 Tecnoware. Todos los derechos reservados.</p>
-
-        <p class="atribucion">
-            Iconos por <a href="https://icons8.com" target="_blank">Icons8</a>
-        </p>
-
-    </footer>
-
-</body>
 </php>
