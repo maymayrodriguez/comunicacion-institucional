@@ -3,7 +3,7 @@
 
     <main id ="mainHorarios">
 
-    <img src="/static/img/horarios.jpeg" alt="Imagen de horario">
+    <h2> PÁGINA DE HORARIOS </h2>
 
     </main>
 
