@@ -11,7 +11,7 @@ class Conexion {
 
         $servidor = "localhost";
         $usuario = "app";
-        $contrasenia = "1234";
+       $contrasenia = "1234";
         $baseDeDatos = "comunicacion_institucional";
 
         $this->conexion = new mysqli($servidor, $usuario, $contrasenia, $baseDeDatos);
@@ -48,38 +48,5 @@ class Conexion {
     }
 
 }
-
-
-/*
-
-
-        public function getConexion() {
-            
-            
-
-            if ($this->conetion === null) {
-                $this->conetion = new mysqli($this->servidor, $this->usuario, $this->contrasenia, $this->baseDeDatos);
-
-                
-                if ($this->conetion->connect_error) {
-                    die("Conexión fallida: " . $this->conetion->connect_error);
-                }
-            }
-
-            return $this->conetion;
-
-        }
-
-        public function cerrarConexion() {
-
-            if ($this->conetion !== null) {
-                $this->conetion->close();
-                $this->conetion = null;
-            }
-        
-        }
-
-    }*/
-
 
 ?>
