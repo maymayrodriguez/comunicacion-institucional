@@ -1,6 +1,6 @@
 <?php
 
-namespace app\persistencia\Conexion;
+namespace app/persistencia/Conexion;
 
 class Conexion {
 
