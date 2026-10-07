@@ -2,8 +2,8 @@
 
 namespace app\persistencia\NotificacionDAO;
 require_once dirname(__DIR__) . '/../config/autoload.php';
-    use app/persistencia/Conexion;
-    use app/logica/NotificacionEntidad;
+    use app\persistencia\Conexion;
+    use app\logica\NotificacionEntidad;
     
 
     $notificacion = new NotificacionEntidad(15,"Notificacion de prueba 3","Esta es una notificación de prueba","Restringido");
