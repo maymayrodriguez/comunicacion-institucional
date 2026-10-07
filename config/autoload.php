@@ -5,7 +5,7 @@ spl_autoload_register(function($class){
 $prefijo = "app/";
 $ruta = __DIR__ . "/../";
 
-$class = str_replace('\\', '/', $class)
+$class = str_replace('\\', '/', $class);
 $caminoclase = $ruta . str_replace($prefijo, "", $class) . ".php";
 
 if (file_exists($caminoclase)){
