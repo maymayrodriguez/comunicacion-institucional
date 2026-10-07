@@ -1,7 +1,7 @@
 <?php
 
 namespace app\persistencia\NotificacionDAO;
-require_once __DIR__ . '/../config/utoload.php';
+require_once dirname(__DIR__) . '/../config/utoload.php';
     use app\persistencia\Conexion;
     use app\logica\NotificacionEntidad;
     
