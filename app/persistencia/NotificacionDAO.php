@@ -1,7 +1,7 @@
 <?php
 
 namespace app\persistencia\NotificacionDAO;
-
+require_once __DIR__ . 'app\config\autoload.php';
     use app\persistencia\Conexion;
     use app\logica\NotificacionEntidad;
     
@@ -35,7 +35,7 @@ namespace app\persistencia\NotificacionDAO;
             
             $sql = "INSERT INTO notificaciones (identificador, nombre, descripcion, publico) VALUES (?, ?, ?, ?)";  
 
-            $conexion = $this->conexion.getConexion(); 
+            $conexion = $this->conexion->getConexion(); 
 
             $sentencia = $conexion->prepare($sql);
             $sentencia->bind_param("isss", $identificador, $nombre, $descripcion, $publico);
@@ -50,7 +50,7 @@ namespace app\persistencia\NotificacionDAO;
 
             $sql = "SELECT identificador, nombre, descripcion, publico FROM notificaciones";
 
-            $conexion = $this->conexion.getConexion();
+            $conexion = $this->conexion->getConexion();
 
             $resultado = $conexion->query($sql);
 
