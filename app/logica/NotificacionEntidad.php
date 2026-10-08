@@ -1,6 +1,6 @@
 <?php
 
-namespace app/logica/NotificacionEntidad;
+namespace app\logica\NotificacionEntidad;
 require_once dirname(__DIR__) . '/../config/autoload.php';
 class NotificacionEntidad{
     private int $identificador;
