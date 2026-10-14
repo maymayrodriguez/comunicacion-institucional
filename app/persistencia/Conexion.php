@@ -18,7 +18,7 @@ class Conexion {
 
         $servidor = "localhost";
         $usuario = "app";
-       $contrasenia = "1234";
+        $contrasenia = "1234";
         $baseDeDatos = "comunicacion_institucional";
 
         $this->conexion = new mysqli($servidor, $usuario, $contrasenia, $baseDeDatos);
