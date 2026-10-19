@@ -1,5 +1,5 @@
 <?php
-
+namespace app\persistencia;
 /*
     Se define la clase Conexion.
     Se utiliza el patrón Singleton, solo debe existir una única instancia de la misma en la ejecución del programa.
@@ -10,7 +10,7 @@
 class Conexion {
 
     private static ?Conexion $instancia = null;
-    private ?mysqli $conexion;
+    private ?\mysqli $conexion;
 
 
     //constructor privado con datos hardcodeados
@@ -21,7 +21,7 @@ class Conexion {
         $contrasenia = "1234";
         $baseDeDatos = "comunicacion_institucional";
 
-        $this->conexion = new mysqli($servidor, $usuario, $contrasenia, $baseDeDatos);
+        $this->conexion = new \mysqli($servidor, $usuario, $contrasenia, $baseDeDatos);
 
         // En caso de error en la conexión se detiene la ejecución de la petición actual
 
@@ -39,7 +39,7 @@ class Conexion {
 
     }
 
-    public function getConexion(): mysqli {
+    public function getConexion(): \mysqli {
         return $this->conexion;
     }
 
@@ -56,7 +56,7 @@ class Conexion {
         throw new LogicException("Se intentó clonar una instancia de Conexion");
     }
 
-    private function __wakeup(){
+    public function __wakeup(){
         throw new LogicException("Se intentó deserializar una instancia de Conexion");
     }
 

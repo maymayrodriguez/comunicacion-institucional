@@ -1,4 +1,5 @@
 <?php
+namespace app\logica\entidades;
 class NotificacionEntidad{
     private int $identificador;
     private String $nombre;

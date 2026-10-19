@@ -1,8 +1,11 @@
 <?php
 
-    require_once 'Conexion.php';
-    require_once 'NotificacionEntidad.php';
-    
+    namespace app\persistencia;
+
+    use app\persistencia\Conexion;
+    use app\logica\entidades\NotificacionEntidad;
+
+    require_once __DIR__ . "\..\config\autoload.php";
 
     $notificacion = new NotificacionEntidad(15,"Notificacion de prueba 3","Esta es una notificación de prueba","Restringido");
     
