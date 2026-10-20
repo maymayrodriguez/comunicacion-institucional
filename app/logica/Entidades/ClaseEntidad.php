@@ -1,11 +1,13 @@
-<!-- <?php 
+<?php 
+
+require_once __DIR__ . '/DiaEntidad.php';
 
 class ClaseEntidad {
 
     private int  $identificador;
     private time $horaInicial;
     private time $horaFinal;
-    private String $nombreDia;
+    private  $nombreDia;
     private String $nombreGrupo;
     private String $nombreMateria;
 
@@ -73,4 +75,4 @@ class ClaseEntidad {
 
 }
 
-?> -->
+?> 

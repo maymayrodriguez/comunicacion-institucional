@@ -16,6 +16,7 @@ class Conexion {
     //constructor privado con datos hardcodeados
     private function __construct() {
 
+<<<<<<< Updated upstream
         $servidor = "localhost";
         $usuario = "app";
         $contrasenia = "1234";
@@ -28,6 +29,9 @@ class Conexion {
         if ($this->conexion->connect_error !== null) {
             throw new Exception("Conexión fallida: " . $this->conexion->connect_error);
         }
+=======
+        $this->conexion = $this->crearConexion();
+>>>>>>> Stashed changes
 
     }
 
@@ -39,8 +43,27 @@ class Conexion {
 
     }
 
+<<<<<<< Updated upstream
     public function getConexion(): \mysqli {
         return $this->conexion;
+=======
+    public function crearConexion(): mysqli {
+
+        $servidor = "localhost";
+        $usuario = "app";
+        $contrasenia = "1234";
+        $baseDeDatos = "comunicacion_institucional";
+
+        $conexionCreada = new mysqli($servidor, $usuario, $contrasenia, $baseDeDatos);
+
+        // En caso de error en la conexión se detiene la ejecución de la petición actual
+
+        if ($conexionCreada->connect_error !== null) {
+            throw new Exception("Conexión fallida: " . $conexionCreada->connect_error);
+        }
+
+        return $conexionCreada;
+>>>>>>> Stashed changes
     }
 
     public function cerrarConexion() {
@@ -50,12 +73,26 @@ class Conexion {
         }
     }
 
-    //Se reescriben lo métodos clone y wakeup para evitar la creación de nuevas instancias de Conexión
+    public function getConexion(): mysqli {
+        if ($this->conexion === null) {
+            $this->conexion = new mysqli("localhost", "app", "1234", "comunicacion_institucional");
+        }
+        return $this->conexion;
+    }
+
+    //Se declaran lo métodos mágicos clone, unserialize y wakeup para que lanzen una excepción
 
     private function __clone(){
         throw new LogicException("Se intentó clonar una instancia de Conexion");
     }
 
+<<<<<<< Updated upstream
+=======
+    private function __unserialize($data){
+        throw new LogicException("Se intentó deserializar una instancia de Conexion");
+    }
+
+>>>>>>> Stashed changes
     public function __wakeup(){
         throw new LogicException("Se intentó deserializar una instancia de Conexion");
     }
