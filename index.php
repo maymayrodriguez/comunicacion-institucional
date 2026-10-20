@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Sistema de comunicación institucional</title>
-    <link rel="icon" href="/static/img/logo.png">
+    <link rel="icon" href="/comunicacion-institucional/static/img/logo.png">
 
-    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/comunicacion-institucional/static/css/styles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     
-    <script src="/static/js/script.js" defer></script>
+    <script src="/comunicacion-institucional/static/js/script.js" defer></script>
 </head>
 <body>
     
     <header>
 
-        <img src="/static/img/logo.png" alt="Logo del sitio">
+        <img src="/comunicacion-institucional/static/img/logo.png" alt="Logo del sitio">
 
         <h1>Sistema de comunicación institucional</h1>
 

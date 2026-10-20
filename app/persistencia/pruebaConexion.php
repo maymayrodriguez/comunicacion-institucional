@@ -62,13 +62,14 @@ try {
 
 $conexionBD->cerrarConexion();
 
-if ($conexionBD->getConexion() === null) {
-    echo "Éxito: La conexión se cerró correctamente";
-}else{
-    
-    echo "Error: No se cerró la conexión";
+try {
+    if ($mysqli->query("SELECT 1") === false){
+        echo "Correcto, no se pudo ejecutar la consulta después de cerrar la conexión";
+    }else{
+        echo "Error, la conexión no se cerró correctamente";
+    }
+}catch(Exception $e){
+    echo "Surgió una excepción al ejecutar la consulta tras cerrar la conexión: " . $e->getMessage();
 }
-
-
 
 ?>
