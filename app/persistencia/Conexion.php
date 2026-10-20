@@ -1,5 +1,5 @@
 <?php
-namespace app\persistencia;
+//namespace app\persistencia;
 /*
     Se define la clase Conexion.
     Se utiliza el patrón Singleton, solo debe existir una única instancia de la misma en la ejecución del programa.
@@ -10,28 +10,13 @@ namespace app\persistencia;
 class Conexion {
 
     private static ?Conexion $instancia = null;
-    private ?\mysqli $conexion;
+    private ?mysqli $conexion;
 
 
     //constructor privado con datos hardcodeados
     private function __construct() {
 
-<<<<<<< Updated upstream
-        $servidor = "localhost";
-        $usuario = "app";
-        $contrasenia = "1234";
-        $baseDeDatos = "comunicacion_institucional";
-
-        $this->conexion = new \mysqli($servidor, $usuario, $contrasenia, $baseDeDatos);
-
-        // En caso de error en la conexión se detiene la ejecución de la petición actual
-
-        if ($this->conexion->connect_error !== null) {
-            throw new Exception("Conexión fallida: " . $this->conexion->connect_error);
-        }
-=======
         $this->conexion = $this->crearConexion();
->>>>>>> Stashed changes
 
     }
 
@@ -43,10 +28,6 @@ class Conexion {
 
     }
 
-<<<<<<< Updated upstream
-    public function getConexion(): \mysqli {
-        return $this->conexion;
-=======
     public function crearConexion(): mysqli {
 
         $servidor = "localhost";
@@ -63,7 +44,6 @@ class Conexion {
         }
 
         return $conexionCreada;
->>>>>>> Stashed changes
     }
 
     public function cerrarConexion() {
@@ -86,13 +66,10 @@ class Conexion {
         throw new LogicException("Se intentó clonar una instancia de Conexion");
     }
 
-<<<<<<< Updated upstream
-=======
     private function __unserialize($data){
         throw new LogicException("Se intentó deserializar una instancia de Conexion");
     }
 
->>>>>>> Stashed changes
     public function __wakeup(){
         throw new LogicException("Se intentó deserializar una instancia de Conexion");
     }
