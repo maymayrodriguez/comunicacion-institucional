@@ -62,11 +62,11 @@ class Conexion {
 
     //Se declaran lo métodos mágicos clone, unserialize y wakeup para que lanzen una excepción
 
-    private function __clone(){
+    public function __clone(){
         throw new LogicException("Se intentó clonar una instancia de Conexion");
     }
 
-    private function __unserialize($data){
+    public function __unserialize($data){
         throw new LogicException("Se intentó deserializar una instancia de Conexion");
     }
 
