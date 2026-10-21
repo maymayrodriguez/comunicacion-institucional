@@ -10,10 +10,6 @@
     $notificacion = $notificacionPresentacion->obtenerNotificacion();
 
 
-    //$nombre = $notificacion->getNombre();
-
-    //echo "$nombre";
-
     //$notificacion = $notificacionPresentacion->
     // llamado a la presentacion
 
@@ -28,8 +24,8 @@
         <div id = "contenedorNotificaciones">
             <h2>Últimas novedades</h2>
             <div class = "notificacion">
-                <h3> <?php  ?> </h3>
-                <p> Este miércoles 30 de septiembre de 2026 a las 19:00 se llevará a cabo la segunda defensa del proyecto de 3ero MC Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ut tenetur assumenda. Sapiente optio eius mollitia incidunt voluptatibus laudantium natus cum, dolor suscipit vel facilis veniam blanditiis quam necessitatibus vero.</p>
+                <h3> <?php echo $notificacion->getNombre(); ?> </h3>
+                <p> <?php echo $notificacion->getDescripcion(); ?> </p>
                 <a class="leerMas">Leer más</a>
             </div>
             <div class = "notificacion">
