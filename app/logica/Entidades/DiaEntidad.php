@@ -1,4 +1,4 @@
-<!-- <?php 
+<?php 
 
 class DiaEntidad{
 
@@ -18,4 +18,4 @@ class DiaEntidad{
 
 }
 
-?> -->
+?> 

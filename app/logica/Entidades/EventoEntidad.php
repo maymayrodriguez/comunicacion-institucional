@@ -22,11 +22,11 @@ class EventoEntidad extends NotificacionEntidad {
         $this->horaInicio=$horaInicio;
     }
 
-    }
-    public function getHoraFinal(): time
+     public function getHoraFinal(): time
     {
         return $this->horaFinal;
     }
+
      public function setHoraFinal(time $horaFinal):void
     {
         $this->horaFinal=$horaFinal;
