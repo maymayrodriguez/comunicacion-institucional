@@ -64,17 +64,15 @@ try {
 
 $conexionBD->cerrarConexion();
 
-try{
-        // usamos @, el operador de control de errores, para evitar la advertencia
-        echo "Ejecutando consulta...\n";
-        if (@$mysqli->query("SELECT 1") === false){
-            echo "Correcto, la conexión a la base de datos falló como era esperado\n";
-            throw new Exception("Error al ejecutar la consulta de prueba: " . $mysqli->error);
-        }
-        echo "Error! La conexión no fue cerrada\n";
-    }catch(Exception $e){
-        echo "Error de conexión: " . $e->getMessage() . "\n";
+try {
+    if ($mysqli->query("SELECT 1") === false){
+        echo "Correcto, no se pudo ejecutar la consulta después de cerrar la conexión";
+    }else{
+        echo "Error, la conexión no se cerró correctamente";
     }
+}catch(Exception $e){
+    echo "Surgió una excepción al ejecutar la consulta tras cerrar la conexión: " . $e->getMessage();
+}
 
 
 
