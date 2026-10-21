@@ -5,38 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Sistema de comunicación institucional</title>
-    <link rel="icon" href="/static/img/logo.png">
+    <link rel="icon" href="/comunicacion-institucional/static/img/logo.png">
 
-    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/comunicacion-institucional/static/css/styles.css">
+
+    <link rel="stylesheet" href="https://cloudflare.com">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     
-    <script src="/static/js/script.js" defer></script>
+    <script src="/comunicacion-institucional/static/js/script.js" defer></script>
 </head>
 <body>
     
     <header>
 
-        <img src="/static/img/logo.png" alt="Logo del sitio">
+        <div><a id="iniciarSesionA">Iniciar Sesión</a></div>
 
-        <h1>Sistema de comunicación institucional</h1>
+        <nav>
 
-        <ul id="menuHeader">
-            <li><button>Menú</button></li>
-            <li>
-                <ul class="oculto">
-                    <li><a id="horarios">Horarios</a></li>
-                    <li><a id="calendario">Calendario</a></li>
-                    <li><a id="grupos">Grupos</a></li>
-                    <li><a id="notificaciones">Noticias</a></li>
-                    <li><a id="iniciarSesionA">Iniciar Sesión</a></li>
-                    <li><a id="cerrarSesionA">Cerrar Sesión</a></li>
-                </ul>
-            </li>
-        </ul>
+        <img src="/comunicacion-institucional/static/img/logo.png" alt="Logo del sitio">
+
+        <div id=nombrePagina>
+        <h1>UTU</h1>
+        <h3>Comunicación Institucional</h3>
+        </div>
+
+        <div id=navInteractivo>
+        <a id="notificaciones">Notificaciones</a>
+
+        <a id="horarios">Horarios</a>
+
+        <a id="calendario">Calendario</a>
+
+        <a id="grupos">Grupos</a>
+        </div>
+
+        </nav>
+        
 
     </header>
 

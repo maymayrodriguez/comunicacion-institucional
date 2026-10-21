@@ -1,11 +1,15 @@
-
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100vw;
+}
 
 /*CUERPO PRINCIPAL DE TODAS LAS PAGINAS*/
+
 body {
     /*Color del body*/
-    background-color:   #b7d4e6;
+    background-color:  #D3DCE3;
     margin: 0;
-    overflow: hidden;
 }
 
 
@@ -18,28 +22,119 @@ header {
     left: 0vw;
     top: 0vh;
     right: 0vw;
-    height: 13vh;
+    height: 18vh;
     
     /*Posición del contenido del header*/
     display: flex;
-    gap: 2%;
-    position:relative;
-    z-index: 100;
-
+    flex-direction: column;
+    justify-content: end;
     /*Color del contenido del header*/
-    background-color: #0D2B45;
+    background-color: #0B3B60;
 }
 
-header h1{      
+#iniciarSesionA{
+    width: 7.5vw;
+    border-radius: 0 0 5px 5px;
+
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: 14.5%;
+    margin-bottom: 1%;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+    color:#ffffff;
+    background-color: #17AAD2;
+}
+
+#iniciarSesionA:hover{
+    cursor:pointer;
+}
+
+header nav{
+
+    height: 13.5vh;
+    width: 100%;
+
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+    background-color: #13588E;
+
+
+}
+
+header img{
+    margin-top: 0.4%;
+    margin-bottom: 0.4%;
+    margin-right: 1%;
+    margin-left: 0;
+
+}
+
+
+
+#nombrePagina h1{      
     /*Posición del <h1> dentro del header*/
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 
     /*Diseño del <h1> dentro del header*/
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.6em;
+    font-size: 3em;
     color: white;
 }
+
+#nombrePagina h3{
+    
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    color: white;
+}
+
+#navInteractivo{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 13vw;
+    width: 34vw;
+
+    color:#ffffff;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+#navInteractivo * {
+    display: flex;
+    height: 13.5vh;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-bottom-style: solid;
+    border-width: 0.5vw;
+    border-color: #13588E;
+    transition: all 0.3s ease;
+    
+}
+
+#navInteractivo *:hover {
+    cursor: pointer;
+    border-bottom-style: solid;
+    border-color: #17AAD2;
+    color: #17AAD2;
+}
+
 
 /*---------------------------------------------*/
 
@@ -62,11 +157,35 @@ header h1{
     list-style: none;
 }
 
+#menuHeader > li{
+    background-color: rgb(180, 0, 0);
+    width:3vw;
+}
 
-#menuHeader button{
+#botonMenu{
     /*Tamaño del botón del menú*/
-    height: 8vh;
-    width: 4vw;
+    height: 100%;
+    width: 100%;
+
+    border-width: 0;
+    border-radius: 100%;
+
+    position:relative;
+    z-index: 1000;
+
+    background-color: #ffffff;
+
+}
+
+#botonMenu i{
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+}
+
+#botonMenu:hover{
+    background-color: rgb(200, 209, 209);
 }
 
 #menuHeader * {
@@ -75,18 +194,43 @@ header h1{
     padding:0;
     /*Estilo de cada <li> dentro del menú*/
     list-style: none;
+}
+
+#menuHeader ul {
+    opacity: 1;
+    max-width: 50vh;
+    transition: all 0.4s ease-in-out;
     background-color: #ffffff;
+    border-radius: 5px;
 }
 
 #menuHeader ul * {
     /*Distribución del contenido dentro del <ul> hijo del menú*/
-    padding: 5%;
+    margin-top: 7.5%;
+    width: 100%;
     
+}
+
+#menuHeader ul li:first-child{
+    border-radius: 5px 5px 0 0 ;
+}
+
+#menuHeader ul li:last-child{
+    border-radius: 0 0 5px 5px ;
+}
+
+#menuHeader ul li:hover {
+    background-color: rgb(227, 233, 233);
 }
 
 /*Una clase aplicable a cualquier elemento, destinada para hacer desaparecer al mismo*/
 .oculto {
-    display:none;
+    visibility: hidden;
+    max-height: 0;
+    overflow:hidden;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+
 }
 
 /*---------------------------------------------*/
@@ -109,19 +253,9 @@ header h1{
     cursor: pointer;
 } 
 
-#mainInicio{
-    /*Posición del main de inicio*/
-    position: fixed;
-    top: 13vh;
-    left: 0vw;
-    right: 40vw;
-    bottom: 0vh;
-
-}
 
 
 #footerInicio{
-    position:fixed;
     bottom: 0vh;
     left: 0vw;
 }
@@ -129,27 +263,83 @@ header h1{
 /*----------------------------------------------------------------------------------------*/
 
 /*ESTILOS DEL MAIN NOTIFICACIONES*/
-#mainNotificaciones{
-    overflow-y: auto;
+#mainNotificaciones{  
+
+    overflow: visible;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10%;
-    padding: 10%;
+    padding-top: 5%;
     width: 100vw;
     height: 100vh;
 
 }
-.contenedorNotificacion {
 
+#contenedorNotificaciones{
+
+    background-color: #F5FAFB;
+    box-shadow: 0 0 7px 1px #c6ced8;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 69vw;
+    max-height: 300vh;
+    border-radius: 15px;
+
+    gap:8vh;
+
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+}
+
+#contenedorNotificaciones h2{
+    margin-right: 29vw;
+    margin-bottom:0;
+    margin-top:0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+}
+
+.notificacion {
+
+    padding-left:5%;
+    padding-right:7%;
+    padding-top:1%;
+    width: 40vw;
+    height: 30vh;
+
+    border-radius: 15px;
+    box-shadow: 0 0 7px 1px #e1e8eb;
     background-color: #ffffff;
-    margin-bottom: 7.5%;
-    margin-left: auto;
-    margin-right: 30%;
-    width: 50vw;
-    height: 35vh;
 
-    border-radius: 0 15px 15px 15px;
+    font-family: 'Montserrat', sans-serif;
+   
+}
+
+.notificacion > p {
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;      
+    overflow: hidden;
+}
+
+.leerMas {
+
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    font-size: 1em;
+
+    border-radius: 5px;
+    background-color: #1b75bc;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 /*----------------------------------------------------------------------------------------*/

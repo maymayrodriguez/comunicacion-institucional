@@ -1,11 +1,11 @@
 <?php
-namespace app\logica;
+/*namespace app\logica;
 use app\persistenica\NotificacionDAO;
 use app\persistencia\Conexion;
-
+*/
 class NotificacionLogica{
 
-    function crearNotificacion (int $identificador, string $nombre, string $descripcion, string $publico): boolean{
+   /* function crearNotificacion (int $identificador, string $nombre, string $descripcion, string $publico): boolean{
 
         $conexion = Conexion::getInstancia();
 
@@ -19,8 +19,8 @@ class NotificacionLogica{
 
         return true;
         
-    }
+    }*/
 
-    }
+}
 
 ?>

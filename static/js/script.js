@@ -29,7 +29,7 @@ function inicializarLoginButton() {
 /*Funcionamiento del botón del menú desplegable*/
 
 //Guarda el botón en una constante
-const botonMenu = document.querySelector("#menuHeader button");
+const botonMenu = document.querySelector("#botonMenu");
 if (botonMenu){
     //Guarda el <ul> hijo del menú 
     let menuDesplegable = document.querySelector("#menuHeader ul");
@@ -59,7 +59,7 @@ const cerrarSesionA = document.querySelector("#cerrarSesionA");
 const indexMain = document.querySelector("#mainInicio");
 
 
-if (horarios && calendario && grupos && notificaciones && iniciarSesionA && cerrarSesionA){
+if (horarios && calendario && grupos && notificaciones && iniciarSesionA){
 
     document.addEventListener("DOMContentLoaded", async () => {
 
