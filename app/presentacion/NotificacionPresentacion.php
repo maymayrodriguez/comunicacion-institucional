@@ -18,8 +18,6 @@ class NotificacionPresentacion{
         //creamos una notificacion
         $notificacion = new NotificacionEntidad(0, "Notificación de prueba 1","Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, ducimus sequi laudantium debitis expedita, minus maiores quaerat culpa ratione, enim recusandae et deleniti impedit. Provident fuga voluptates impedit dolore corrupti?", "orep");
 
-        echo "$notificacion->getNombre()";
-
         return $notificacion;
 
 

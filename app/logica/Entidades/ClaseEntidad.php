@@ -1,19 +1,21 @@
 <?php 
 
 require_once __DIR__ . '/DiaEntidad.php';
+require_once __DIR__ . '/GrupoEntidad.php';
+require_once __DIR__ . '/MateriaEntidad.php';
 
 class ClaseEntidad {
 
     private int  $identificador;
     private time $horaInicial;
     private time $horaFinal;
-    private  $nombreDia;
-    private String $nombreGrupo;
-    private String $nombreMateria;
+    private DiaEntidad $nombreDia;
+    private GrupoEntidad $nombreGrupo;
+    private MateriaEntidad $nombreMateria;
 
     
 
-    public function __construct (int $identificador, time $horaInicial, time $horaFinal) {
+    public function __construct (int $identificador, time $horaInicial, time $horaFinal, DiaEntidad $nombreDia, GrupoEntidad $nombreGrupo, MateriaEntidad $nombreMateria) {
         $this->identificador = $identificador;
         $this->horaInicial= $horaInicial;
         $this->horaFinal = $horaFinal;
