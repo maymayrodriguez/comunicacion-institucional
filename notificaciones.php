@@ -1,25 +1,49 @@
 <?php
 
-    // req
-
     require_once 'app/presentacion/NotificacionPresentacion.php';
     require_once 'app/logica/Entidades/NotificacionEntidad.php';
+
+    $notificacionPresentacion = new NotificacionPresentacion();
+    $notificaciones = $notificacionPresentacion->obtenerNotificaciones(-1, -1);
+
+?>
+
+    <main id = "mainNotificaciones"> 
+            <div id = "contenedorNotificaciones">
+                <h2>Últimas novedades</h2>
+    
+
+                <?php
+
+                    foreach ($notificaciones as $notificacion) {
+        
+                        echo '<div class = "notificacion">';
+                        echo '<h3>' . $notificacion->getNombre() . '</h3>';
+                        echo '<p>' . $notificacion->getDescripcion() . '</p>';
+                        echo '<a class="leerMas">Leer más</a>';
+                        echo '</div>';
+
+                    }
+
+                ?>
+
+
+        </div>
+    </main>
+
+<?php
+
+
+
+    /*
 
     $notificacionPresentacion = new NotificacionPresentacion();
 
     $notificacion = $notificacionPresentacion->obtenerNotificacion();
 
+    */
 
-    //$notificacion = $notificacionPresentacion->
-    // llamado a la presentacion
-
-
-    // $notifPres = new NotificacionPResentacion()
-    // $arrayNotificaciones = $notifPres->listarNotificacionesRecientes();
-
-?>
-
-
+/*
     <main id = "mainNotificaciones"> 
         <div id = "contenedorNotificaciones">
             <h2>Últimas novedades</h2>
@@ -42,3 +66,6 @@
             </div>
         </div>
     </main>
+
+    */
+?>
