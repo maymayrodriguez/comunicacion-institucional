@@ -1,0 +1,6 @@
+<main id="error">
+
+    <h1>Error</h1>
+    <p>Ha ocurrido un error inesperado.</p>
+
+</main>

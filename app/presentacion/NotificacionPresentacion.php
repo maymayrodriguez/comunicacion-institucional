@@ -12,7 +12,24 @@ class NotificacionPresentacion{
     }
 
 
-    //función de prueba
+    // Es necesario realizar comprobaciones respecto a la paginación
+    public function obtenerNotificaciones (int $limite, int $pagina): array {
+
+        if ($pagina < 1 || $limite < 1) {
+            $pagina = 1;
+            $limite = 10;
+        }
+
+        $notificaciones = $this->servicioNotificacion->obtenerNotificaciones($limite, $pagina);
+
+        return $notificaciones;
+
+
+    }
+
+
+
+    /*
     public function obtenerNotificacion(){
 
         //creamos una notificacion
@@ -23,11 +40,11 @@ class NotificacionPresentacion{
 
     }
 
-    /*public function listarNotificaciones() {
+    public function listarNotificaciones() {
 
-        $arrNotificaciones = this->servicioNotificaciones->
+        $arrNotificaciones = this->servicioNotificaciones->listarNotificaciones();
 
-        return 
+        return $arrNotificaciones;
     }*/
 
 }

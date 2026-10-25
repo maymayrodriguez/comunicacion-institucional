@@ -3,7 +3,18 @@
 use app\persistenica\NotificacionDAO;
 use app\persistencia\Conexion;
 */
+
+require_once __DIR__ . '/Entidades/NotificacionEntidad.php';
+require_once __DIR__ . '/../persistencia/NotificacionDAO.php';
+
 class NotificacionLogica{
+
+    private NotificacionDAO $notificacionDAO;
+
+    public function __construct() {
+        $this->notificacionDAO = new NotificacionDAO();
+    }
+
 
    /* function crearNotificacion (int $identificador, string $nombre, string $descripcion, string $publico): boolean{
 
@@ -20,6 +31,16 @@ class NotificacionLogica{
         return true;
         
     }*/
+
+    function obtenerNotificaciones (int $limite, int $pagina) : array {
+
+        $desplazamiento = ($pagina - 1) * $limite;
+
+        $notificaciones = $this->notificacionDAO->obtenerNotificaciones($limite, $desplazamiento);
+
+        return $notificaciones;
+
+    }
 
 }
 

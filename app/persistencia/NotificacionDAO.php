@@ -1,6 +1,6 @@
 <?php
 
-    namespace app\persistencia;
+    /*namespace app\persistencia;
 
     use app\persistencia\Conexion;
     use app\logica\entidades\NotificacionEntidad;
@@ -14,15 +14,20 @@
 
     $notificacionDAO->insertarNotificacion($notificacion);
     $notificacionDAO->obtenerNotificaciones();
-    
+    */
+
+
+    require_once __DIR__ . "/../logica/entidades/NotificacionEntidad.php";
+    require_once __DIR__ . "/../persistencia/Conexion.php";
+
     class NotificacionDAO {
 
         private Conexion $conexion;
             
 
-        public function __construct(Conexion $conexion){
+        public function __construct(){
             
-            $this->conexion = $conexion;
+            $this->conexion = Conexion::getInstancia();
             
         }
        
@@ -36,18 +41,42 @@
             
             $sql = "INSERT INTO notificaciones (identificador, nombre, descripcion, publico) VALUES (?, ?, ?, ?)";  
 
-            $conexion = $this->conexion.getConexion(); 
+            $conexion = $this->conexion->getConexion(); 
 
             $sentencia = $conexion->prepare($sql);
             $sentencia->bind_param("isss", $identificador, $nombre, $descripcion, $publico);
             $sentencia ->execute();
 
             $sentencia->close();
-            $this->conexion->cerrarConexion();
             
         }
 
-        function  obtenerNotificaciones () {
+        function obtenerNotificaciones (int $limite, int $desplazamiento): array {
+
+            $sql = "SELECT identificador, nombre, descripcion, publico FROM notificaciones LIMIT ? OFFSET ?";
+
+            $conexion = $this->conexion->getConexion();
+
+            $sentencia = $conexion->prepare($sql);
+            $sentencia->bind_param("ii", $limite, $desplazamiento);
+            $sentencia->execute();
+
+            $resultado = $sentencia->get_result();
+
+            $notificaciones = array();
+
+            while ($fila = $resultado->fetch_assoc()) {
+                $notificacion = new NotificacionEntidad($fila["identificador"], $fila["nombre"], $fila["descripcion"], $fila["publico"]);
+                $notificaciones[] = $notificacion;
+            }
+
+            $sentencia->close();
+
+            return $notificaciones;
+
+        }
+
+        /*function  mostrarNotificaciones () {
 
             $sql = "SELECT identificador, nombre, descripcion, publico FROM notificaciones";
 
@@ -62,9 +91,8 @@
                 echo "Público: " . $fila["publico"] . "<br><br>";
             }
 
-            $this->conexion->cerrarConexion();
 
-        }
+        }*/
 
 
         
