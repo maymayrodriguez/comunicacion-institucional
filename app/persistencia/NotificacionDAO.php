@@ -53,7 +53,7 @@
 
         function obtenerNotificaciones (int $limite, int $desplazamiento): array {
 
-            $sql = "SELECT identificador, nombre, descripcion, publico FROM notificaciones LIMIT ? OFFSET ?";
+            $sql = "SELECT identificador, nombre, descripcion, publico FROM notificaciones ORDER BY identificador DESC LIMIT ? OFFSET ?";
 
             $conexion = $this->conexion->getConexion();
 
