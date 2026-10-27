@@ -5,8 +5,20 @@
 
     $notificacionPresentacion = new NotificacionPresentacion();
     
+
+
+    if (isset($_GET['pagina'])) {
+        $pagina = $_GET['pagina'];
+    } else {
+        echo "No se ha especificado la página, se mostrará la primera.";
+        $pagina = 1;
+    }
+
+
+
     //try {
-        $notificaciones = $notificacionPresentacion->obtenerNotificaciones(10, 1);
+    echo "pagina: " . $pagina;
+        $notificaciones = $notificacionPresentacion->obtenerNotificaciones(10, $pagina);
         //la siguiente versión podría pasar también el tipo de usuario para filtrar las notificaciones según el público
     /*} catch (Exception $e) {
         

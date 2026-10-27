@@ -63,7 +63,7 @@ if (horarios && calendario && grupos && notificaciones && iniciarSesionA){
 
     document.addEventListener("DOMContentLoaded", async () => {
 
-        const respuestaNotificaciones = await fetch ("notificaciones.php");
+        const respuestaNotificaciones = await fetch ("notificaciones.php" + window.location.search);
 
         const notificacionesTexto = await respuestaNotificaciones.text();
 
