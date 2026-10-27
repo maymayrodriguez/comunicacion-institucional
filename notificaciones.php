@@ -42,4 +42,11 @@
 
 
         </div>
+        <div>
+            <?php
+            for($i = 1; $i <= 10; $i++){
+                echo '<a href="index.php?pagina=' . $i . '">' . $i . '</a>';
+            }
+            ?>
+    </div>
     </main>
