@@ -42,11 +42,12 @@
 
 
         </div>
-        <div>
+        <div id="paginacion">
             <?php
             for($i = 1; $i <= 10; $i++){
-                echo '<a href="index.php?pagina=' . $i . '">' . $i . '</a>';
+                echo '<a href="index.php?pagina=' . $i . '" class="paginacionIndices">' . $i . '</a>';
             }
+
             ?>
     </div>
     </main>
