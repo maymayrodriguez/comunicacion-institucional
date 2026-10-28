@@ -10,10 +10,10 @@ function inicializarLoginButton() {
 
         if (UsuarioIngresado === "Estudiante" && PasswordIngresado === "Estudiante") {
 
-            window.location.href = "principal-estudiante.php";
+            window.location.href = "index.php";
         }
         else if (UsuarioIngresado === "Docente" && PasswordIngresado === "Docente") {
-            window.location.href = "principal-docente.php";
+            window.location.href = "index.php";
         }
         else{
             alert("Usuario o contraseña incorrectos. Por favor, inténtelo de nuevo.");
