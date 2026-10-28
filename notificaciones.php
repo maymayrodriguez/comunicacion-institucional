@@ -10,25 +10,13 @@
     if (isset($_GET['pagina'])) {
         $pagina = $_GET['pagina'];
     } else {
-        echo "No se ha especificado la página, se mostrará la primera.";
         $pagina = 1;
     }
 
 
+    
+    $notificaciones = $notificacionPresentacion->obtenerNotificaciones(10, $pagina);
 
-    //try {
-    echo "pagina: " . $pagina;
-        $notificaciones = $notificacionPresentacion->obtenerNotificaciones(10, $pagina);
-        //la siguiente versión podría pasar también el tipo de usuario para filtrar las notificaciones según el público
-    /*} catch (Exception $e) {
-        
-        header("Location: error.php");
-        
-        //echo "Error: " . $e->getMessage();
-
-        exit();
-
-    }*/
 
 
 ?>
