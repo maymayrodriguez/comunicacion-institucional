@@ -535,3 +535,28 @@ header img{
 
 }
 
+#mainHorarios {
+font-family: Arial, sans-serif;
+margin: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 3vh;
+    box-shadow: 0 0 7px 1px #c6ced8;
+    }
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 12px;
+    }
+
+th {
+    background-color: #0B3B60;
+    color: white;
+    }
+tr {
+    background-color: #F5FAFB;
+}

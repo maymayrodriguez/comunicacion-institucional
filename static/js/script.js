@@ -10,10 +10,10 @@ function inicializarLoginButton() {
 
         if (UsuarioIngresado === "Estudiante" && PasswordIngresado === "Estudiante") {
 
-            window.location.href = "principal-estudiante.php";
+            window.location.href = "index.php";
         }
         else if (UsuarioIngresado === "Docente" && PasswordIngresado === "Docente") {
-            window.location.href = "principal-docente.php";
+            window.location.href = "index.php";
         }
         else{
             alert("Usuario o contraseña incorrectos. Por favor, inténtelo de nuevo.");
@@ -63,7 +63,7 @@ if (horarios && calendario && grupos && notificaciones && iniciarSesionA){
 
     document.addEventListener("DOMContentLoaded", async () => {
 
-        const respuestaNotificaciones = await fetch ("notificaciones.php");
+        const respuestaNotificaciones = await fetch ("notificaciones.php" + window.location.search);
 
         const notificacionesTexto = await respuestaNotificaciones.text();
 

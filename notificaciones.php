@@ -5,18 +5,18 @@
 
     $notificacionPresentacion = new NotificacionPresentacion();
     
-    //try {
-        $notificaciones = $notificacionPresentacion->obtenerNotificaciones(10, 1);
-        //la siguiente versión podría pasar también el tipo de usuario para filtrar las notificaciones según el público
-    /*} catch (Exception $e) {
-        
-        header("Location: error.php");
-        
-        //echo "Error: " . $e->getMessage();
 
-        exit();
 
-    }*/
+    if (isset($_GET['pagina'])) {
+        $pagina = $_GET['pagina'];
+    } else {
+        $pagina = 1;
+    }
+
+
+    
+    $notificaciones = $notificacionPresentacion->obtenerNotificaciones(10, $pagina);
+
 
 
 ?>
