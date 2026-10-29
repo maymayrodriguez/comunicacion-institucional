@@ -121,11 +121,14 @@ header img{
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    border-bottom-style: solid;
     border-width: 0.5vw;
-    border-color: #13588E;
     transition: all 0.3s ease;
     
+}
+
+.bordeBajo{
+    border-bottom-style: solid;
+    border-color: #13588E;
 }
 
 #navInteractivo *:hover {
@@ -133,6 +136,14 @@ header img{
     border-bottom-style: solid;
     border-color: #17AAD2;
     color: #17AAD2;
+}
+
+.mainActivo{
+
+    border-bottom-style: solid;
+    border-color: #17AAD2;
+    color: #17AAD2;
+
 }
 
 
@@ -359,8 +370,65 @@ header img{
     justify-content: center;
     align-items: center;
 
+    transition: all 0.4s ease-in-out;
+}
+
+.paginacionIndices:hover{
+
+    background-color: #dfe6e9;
     
 }
+
+#paginacionSiguiente{
+
+    color: #000000;
+    background-color: #F5FAFB;
+    box-shadow: 0 0 7px 1px #c6ced8;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+
+    padding-left:1%;
+    padding-right:1%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.4s ease-in-out;
+
+}
+
+#paginacionSiguiente:hover{
+
+    background-color: #dfe6e9;
+
+}
+
+#paginacionAnterior{
+
+    color: #000000;
+    background-color: #F5FAFB;
+    box-shadow: 0 0 7px 1px #c6ced8;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+
+    padding-left:1%;
+    padding-right:1%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.4s ease-in-out;
+
+}
+
+#paginacionAnterior:hover{
+
+    background-color: #dfe6e9;
+
+}
+
 
 #paginacion{
     display:flex;
