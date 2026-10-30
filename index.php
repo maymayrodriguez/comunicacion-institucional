@@ -26,19 +26,19 @@
 
         <img src="/comunicacion-institucional/static/img/logo.png" alt="Logo del sitio">
 
-        <div id=nombrePagina>
+        <div id="nombrePagina">
         <h1>UTU</h1>
         <h3>Comunicación Institucional</h3>
         </div>
 
-        <div id=navInteractivo>
-        <a id="notificaciones">Notificaciones</a>
+        <div id="navInteractivo">
+        <a id="notificaciones" class="boreBajo">Notificaciones</a>
 
-        <a id="horarios">Horarios</a>
+        <a id="horarios" class="bordeBajo">Horarios</a>
 
-        <a id="calendario">Calendario</a>
+        <a id="calendario" class="bordeBajo">Calendario</a>
 
-        <a id="grupos">Grupos</a>
+        <a id="grupos" class="bordeBajo">Grupos</a>
         </div>
 
         </nav>

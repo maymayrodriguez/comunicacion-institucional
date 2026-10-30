@@ -58,6 +58,19 @@ if (horarios && calendario && grupos && notificaciones && iniciarSesionA){
 
         indexMain.innerHTML = notificacionesTexto;
 
+        notificaciones.classList.add("mainActivo");
+        notificaciones.classList.remove("bordeBajo");
+
+        horarios.classList.remove("mainActivo");
+        horarios.classList.add("bordeBajo");
+
+        grupos.classList.remove("mainActivo");
+        grupos.classList.add("bordeBajo");
+
+        calendario.classList.remove("mainActivo");
+        calendario.classList.add("bordeBajo");
+
+
     });
 
     horarios.addEventListener("click", async () =>{
@@ -67,6 +80,18 @@ if (horarios && calendario && grupos && notificaciones && iniciarSesionA){
         const horarioTexto = await respuestaHorarios.text();
 
         indexMain.innerHTML = horarioTexto;
+
+        notificaciones.classList.remove("mainActivo");
+        notificaciones.classList.add("bordeBajo");
+
+        horarios.classList.add("mainActivo");
+        horarios.classList.remove("bordeBajo");
+
+        grupos.classList.remove("mainActivo");
+        grupos.classList.add("bordeBajo");
+
+        calendario.classList.remove("mainActivo");
+        calendario.classList.add("bordeBajo");
 
 
     });
@@ -79,6 +104,18 @@ if (horarios && calendario && grupos && notificaciones && iniciarSesionA){
 
         indexMain.innerHTML = calendarioTexto;
 
+        notificaciones.classList.remove("mainActivo");
+        notificaciones.classList.add("bordeBajo");
+
+        horarios.classList.remove("mainActivo");
+        horarios.classList.add("bordeBajo");
+
+        grupos.classList.remove("mainActivo");
+        grupos.classList.add("bordeBajo");
+
+        calendario.classList.add("mainActivo");
+        calendario.classList.remove("bordeBajo");
+
     });
 
     grupos.addEventListener("click", async () => {
@@ -89,6 +126,19 @@ if (horarios && calendario && grupos && notificaciones && iniciarSesionA){
 
         indexMain.innerHTML = gruposTexto;
 
+        
+        notificaciones.classList.remove("mainActivo");
+        notificaciones.classList.add("bordeBajo");
+
+        horarios.classList.remove("mainActivo");
+        horarios.classList.add("bordeBajo");
+
+        grupos.classList.add("mainActivo");
+        grupos.classList.remove("bordeBajo");
+
+        calendario.classList.remove("mainActivo");
+        calendario.classList.add("bordeBajo");
+
     });
 
     notificaciones.addEventListener("click", async () => {
@@ -98,6 +148,18 @@ if (horarios && calendario && grupos && notificaciones && iniciarSesionA){
         const notificacionesTexto = await respuestaNotificaciones.text();
 
         indexMain.innerHTML = notificacionesTexto;
+
+        notificaciones.classList.add("mainActivo");
+        notificaciones.classList.remove("bordeBajo");
+
+        horarios.classList.remove("mainActivo");
+        horarios.classList.add("bordeBajo");
+
+        grupos.classList.remove("mainActivo");
+        grupos.classList.add("bordeBajo");
+
+        calendario.classList.remove("mainActivo");
+        calendario.classList.add("bordeBajo");
 
     });
 
@@ -110,6 +172,19 @@ if (horarios && calendario && grupos && notificaciones && iniciarSesionA){
         indexMain.innerHTML = loginTexto;
 
         inicializarLoginButton();
+
+
+        notificaciones.classList.remove("mainActivo");
+        notificaciones.classList.add("bordeBajo");
+
+        horarios.classList.remove("mainActivo");
+        horarios.classList.add("bordeBajo");
+
+        grupos.classList.remove("mainActivo");
+        grupos.classList.add("bordeBajo");
+
+        calendario.classList.remove("mainActivo");
+        calendario.classList.add("bordeBajo");
 
     });
         
