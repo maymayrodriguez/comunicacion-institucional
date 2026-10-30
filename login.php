@@ -1,23 +1,44 @@
->
-    <!--Cuerpo principal de la página de login-->
-    <main id="mainLogin">
-        
-        <!--Titulo del formulario del login-->
-        <h2 id="inicioSesion">Iniciar Sesión</h2>
-        <!--Caja del formulario de login-->
-        <section id="login"> 
-            <!--Formulario de login con campos de usuario y contraseña-->
-            <form>
-                <!--Campo de entrada para el nombre de usuario-->
-                <label id="userLabel" for="user">Usuario:</label>
-                <input type="text" id="user" name="user" required>
+<main id="mainLogin">
 
-                <!--Campo de entrada para la contraseña-->
-                <label id="passwordLabel" for="contrasena">Contraseña:</label>
-                <input type="password" id="contrasena" name="contrasena" required>
+    <h2 id="inicioSesion">Iniciar Sesión</h2>
+    
+    <section id="login">
 
-                <!--Botón para enviar el formulario de login-->
-                <button id="loginButton">Iniciar Sesión</button>
-            </form>
-        </section>
-    </main>
+        <form method="POST" action="app/presentacion/UsuarioPresentacion.php">
+
+
+            <label id="correoLabel" for="correo">
+                Correo electronico:
+            </label>
+
+            <input type="email" id="correo" name="correoElectronico" required>
+
+            <label id="passwordLabel" for="contrasenia">
+                Contraseña: 
+            </label>
+
+            <input type="password" id="contrasenia" name="contrasenia" required>
+
+            <?php
+
+                $accion = $_GET["accion"] ?? "";
+
+                if ($accion == "credenciales-incorrectas") {
+                    
+                    echo "<p id=mensaje>Credenciales incorrectas, vuelva a intentarlo...</p>";
+
+                }
+
+            ?>
+
+             <button id="loginButton" type="submit">
+                Iniciar Sesión
+            </button>
+
+
+        </form>
+
+    </section>
+
+</main>
+

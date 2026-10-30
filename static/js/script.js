@@ -1,29 +1,3 @@
-function inicializarLoginButton() {
-    const loginButton = document.getElementById("loginButton");
-    if (loginButton){
-        loginButton.addEventListener("click", (e) => {
-            e.preventDefault();
-
-        const UsuarioIngresado = document.getElementById("user").value;
-        const PasswordIngresado = document.getElementById("contrasena").value;
-
-
-        if (UsuarioIngresado === "Estudiante" && PasswordIngresado === "Estudiante") {
-
-            window.location.href = "index.php";
-        }
-        else if (UsuarioIngresado === "Docente" && PasswordIngresado === "Docente") {
-            window.location.href = "index.php";
-        }
-        else{
-            alert("Usuario o contraseña incorrectos. Por favor, inténtelo de nuevo.");
-        }
-        });
-    }
-    else {
-        console.log("loginButton no encontrado");
-    }
-}
 
 /*-------------------------------------------*/
 /*Funcionamiento del botón del menú desplegable*/
@@ -59,9 +33,24 @@ const cerrarSesionA = document.querySelector("#cerrarSesionA");
 const indexMain = document.querySelector("#mainInicio");
 
 
+
 if (horarios && calendario && grupos && notificaciones && iniciarSesionA){
 
     document.addEventListener("DOMContentLoaded", async () => {
+
+        const parametros = new URLSearchParams(window.location.search);
+        const accion = parametros.get("accion");
+
+         if (accion === "credenciales-incorrectas"){
+            
+            const respuestaLogin = await fetch("login.php" + window.location.search);
+            const loginTexto = await respuestaLogin.text();
+
+            indexMain.innerHTML = loginTexto;
+            return;
+        
+        }
+
 
         const respuestaNotificaciones = await fetch ("notificaciones.php" + window.location.search);
 

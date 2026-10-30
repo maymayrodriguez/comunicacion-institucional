@@ -1,14 +1,17 @@
 <?php
 class UsuarioEntidad{
+
     protected string $correoElectronico;
     protected string $contrasenia;
     protected string $nombre;
+    protected string $rol;
 
-    public function __construct(string $correoElectronico,string $contrasenia,string $nombre)
+    public function __construct(string $correoElectronico,string $contrasenia,string $nombre,string $rol)
     {
         $this->correoElectronico = $correoElectronico;
         $this->contrasenia=$contrasenia;
         $this->nombre=$nombre;
+        $this->rol=$rol;
     }
 
     public function getCorreoElectronico(): string
@@ -24,6 +27,11 @@ class UsuarioEntidad{
     public function getNombre(): string
     {
         return $this->nombre;
+    }
+
+        public function getRol(): string
+    {
+        return $this->rol;
     }
 
     public function setCorreoElectronico(string $correoElectronico):void

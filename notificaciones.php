@@ -13,7 +13,9 @@
         $pagina = 1;
     }
 
+    session_start();
 
+    var_dump($_SESSION);
     
     $notificaciones = $notificacionPresentacion->obtenerNotificaciones(10, $pagina);
 

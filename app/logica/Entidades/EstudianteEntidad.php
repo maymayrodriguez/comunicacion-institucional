@@ -2,10 +2,8 @@
 class EstudianteEntidad extends UsuarioEntidad {
     private string $grupo;
 
-    public function __construct(string $correoElectronico,string $contrasenia,string $nombre) {
-        parent::__construct($correoElectronico);
-        parent::__construct($contrasenia);
-        parent::__construct($nombre);
+    public function __construct(string $correoElectronico,string $contrasenia,string $nombre, string $grupo) {
+        parent::__construct($correoElectronico, $contrasenia, $nombre, "estudiante");
         $this->grupo = $grupo;
 
     }
