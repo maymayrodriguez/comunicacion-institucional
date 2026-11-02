@@ -170,10 +170,7 @@ if (horarios && calendario && grupos && notificaciones && iniciarSesionA){
         const loginTexto = await respuestaLogin.text();
 
         indexMain.innerHTML = loginTexto;
-
-        inicializarLoginButton();
-
-
+        
         notificaciones.classList.remove("mainActivo");
         notificaciones.classList.add("bordeBajo");
 
@@ -185,6 +182,9 @@ if (horarios && calendario && grupos && notificaciones && iniciarSesionA){
 
         calendario.classList.remove("mainActivo");
         calendario.classList.add("bordeBajo");
+
+        inicializarLoginButton();
+
 
     });
         
