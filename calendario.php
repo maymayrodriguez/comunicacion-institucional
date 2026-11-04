@@ -25,46 +25,10 @@ $months = [
 echo "<h1>" . $months[$month] . " de " . $year . "</h1>";
 
 ?>
-
-<!DOCTYPE html>
-<html lang="es_ES.UTF-8">
-<head>
-    <meta charset="UTF-8">
-    <title>Calendario</title>
-
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: center;
-        }
-
-        th, td {
-            border: 1px solid #020202;
-            padding: 15px;
-        }
-
-        th {
-            background-color: #0B3B60;
-            color: white;
-        }
-
-        td {
-            height: 35px;
-        }
-
-        .today {
-            background-color: #17AAD2;
-            font-weight: bold;
-        }
-    </style>
-
-</head>
-<body>
-
+<main>
 <h2> Calendario de eventos</h2>
 
-<table>
+<table id="calendarioTabla">
     <tr>
         <th>Lun</th>
         <th>Mar</th>
@@ -96,6 +60,4 @@ echo "<h1>" . $months[$month] . " de " . $year . "</h1>";
         ?>
     </tr>
 </table>
-
-</body>
-</html>
+</main>

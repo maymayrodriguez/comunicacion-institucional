@@ -14,6 +14,7 @@
     }
 
     session_start();
+    //echo $_SESSION['grupo'];
     
     $notificaciones = $notificacionPresentacion->obtenerNotificaciones(10, $pagina);
 
