@@ -32,13 +32,13 @@
         </div>
 
         <div id="navInteractivo">
+            
         <a id="notificaciones" class="boreBajo">Notificaciones</a>
 
         <a id="horarios" class="bordeBajo">Horarios</a>
 
         <a id="calendario" class="bordeBajo">Calendario</a>
 
-        <a id="grupos" class="bordeBajo">Grupos</a>
         </div>
 
         </nav>

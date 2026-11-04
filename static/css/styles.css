@@ -113,6 +113,7 @@ header img{
     color:#ffffff;
 
     font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
 }
 
 #navInteractivo * {
@@ -274,14 +275,59 @@ header img{
 /*----------------------------------------------------------------------------------------*/
 
 /*ESTILOS DEL MAIN NOTIFICACIONES*/
+
+
+#contenedorBuscadorNotificaciones{
+    background-color: #F5FAFB;
+    width: 69vw;
+    border-radius: 15px;
+    box-shadow: 0 0 7px 1px #c6ced8;
+    
+    padding-top: 1%;
+    padding-bottom: 1%;
+    gap: 1.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+#contenedorBuscadorNotificaciones input {
+    width: 35vw;
+    height: 3.5vh;
+    border-radius: 5px;
+    border-style: none;
+    box-shadow: 0 0 7px 1px #e1e8eb;
+}
+
+.fa-newspaper{
+    background-color: #ffffff;
+    box-shadow: 0 0 7px 1px #e1e8eb;
+    border-radius: 5px;
+    font-size: 1.1em;
+    padding:0.4%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.4s ease-in-out;
+}
+
+.fa-newspaper:hover{
+    cursor:pointer;
+    background-color: #dfe6e9;
+}
+
 #mainNotificaciones{  
 
     overflow: visible;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10%;
-    padding-top: 5%;
+    gap: 7%;
+    padding-top: 3%;
     width: 100vw;
     height: 100vh;
 
@@ -441,29 +487,6 @@ header img{
 
 /*----------------------------------------------------------------------------------------*/
 
-/*ESTILOS MAIN HORARIOS*/
-
-#mainHorarios{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    width: 100vw;
-    height: 100vh;
-
-}
-
-#mainHorarios img {
-    margin-top: auto;
-    margin-bottom: 5%;
-    margin-right: 8%;
-    width: 70%;
-    height: 70%;
-
-}
-
-/*----------------------------------------------------------------------------------------*/
-
 /*ESTILOS DE LA PANTALLA DEL LOGIN*/
 
 /*Estructura principal de la pantalla login*/
@@ -477,13 +500,14 @@ header img{
 }
 /*Diseño de la seccion de login*/
 #login {
-    background-color: #ffffff;
+    background-color: #F5FAFB;
+    box-shadow: 0 0 7px 1px #c6ced8;
     padding: 40px;
     border-radius: 8px;
     width: 100vw;
     height: 300px;
     max-width: 400px;
-    border: 4px solid #0D2B45;
+    border-radius: 5px;
 }
 /*Diseño del título de login*/
 #mainLogin #inicioSesion {
@@ -511,10 +535,13 @@ header img{
     width: 100%;
     height: 25px;
     font-size: 15px;
+    box-shadow: 0 0 7px 1px #e1e8eb;
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 /*Diseño del botón de login*/
 #login button {
     background-color: #0D2B45;
+    box-shadow: 0 0 7px 1px #e1e8eb;
     color: #ffffff;
     padding: 11px;
     border-radius: 4px;
@@ -603,111 +630,77 @@ header img{
 
 }
 
-
+/*-------------------------------------------------------------------*/
 /*ESTILOS DE HORARIOS*/
+
+
+ 
 #mainHorarios {
-font-family: Arial, sans-serif;
-margin: 20px;
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 100vw;
+    height: 100vh;
+
+    gap: 3%;
+
 }
 
-table {
-    width: 100%;
+#mainHorarios div{
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+#tablaHorarios {
+    width: 90vw;
     border-collapse: collapse;
-    margin-top: 3vh;
     box-shadow: 0 0 7px 1px #c6ced8;
+    border-radius: 5px;
     }
 
-th, td {
+#tablaHorarios th, #tablaHorarios td {
     border: 1px solid #dddddd;
     text-align: center;
     padding: 12px;
     }
 
-th {
+#tablaHorarios th {
     background-color: #0B3B60;
     color: white;
     }
-tr {
+#tablaHorarios tr {
     background-color: #F5FAFB;
 }
 
-/*--------------ESTILO GRUPOS-------------------*/
+/*-------------------------------------------------------------------*/
 
-#mainGrupos {
-    overflow: visible;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 3%;
-    width: 100vw;
-    height: 100vh;
-            }
+/*ESTILOS CALENDARIO*/
 
+#calendarioTabla {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    }
 
-#lupa{
-    width: 40px;
-    height: 30px;
-    stroke: #888888;
-
+#calendarioTabla th, #calendarioTabla td {
+    border: 1px solid #dddddd;
+    padding: 15px;
+    background-color:  #F5FAFB;
 }
 
-#inputBuscar {
-    border: none;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    width: 35vw;
-    color: #333333;
-    background: #F5FAFB;
-    margin-bottom: 11vh;
-    height: 5vh;
+#calendarioTabla th {
+    background-color: #0B3B60;
+    color: white;
+    }
+
+#calendarioTabla td {
+    height: 35px;
 }
 
-#inputBuscar::placeholder {
-    color: #aaa;
-}
-
-#contenedorGrupos{
-    background-color: #F5FAFB;
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-
-    width: 90vw;
-    max-height: 300vh;
-    border-radius: 15px;
-    padding: 30px;
-
-} 
-
-.Grupos{
-    padding: 20px;
-    width: 20xvw;
-    height: auto;
-    min-height: 20vh;
-
-    border-radius: 15px;
-    box-shadow: 0 0 7px 1px #e1e8eb;
-    background-color: #ffffff;
-
-    font-family: 'Montserrat', sans-serif;
-
-}
-
-.GrupoHeader{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
-}
-
-
-
-.DescripcionGrupo {
-    margin: 0;
-    color: #666666;
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
+.today {
+    background-color: #17AAD2 !important; 
+    font-weight: bold !important;
+    }

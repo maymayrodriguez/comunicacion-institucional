@@ -1,4 +1,8 @@
 <?php
+
+//Obtener zona horaria
+date_default_timezone_set('America/Montevideo');
+
 // Obtener el mes y año actual
 $month = date('m');
 $year = date('Y');
@@ -12,13 +16,21 @@ $daysInMonth = cal_days_in_month(
 
 // Obtener el día de la semana en el que comienza el mes
 $firstDay = date('N', strtotime("$year-$month-01"));
+
+//Arreglo de meses en español
+$months = [
+1=> "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+];
+
+echo "<h1>" . $months[$month] . " de " . $year . "</h1>";
+
 ?>
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es_ES.UTF-8">
 <head>
     <meta charset="UTF-8">
-    <title>Calendario de eventos</title>
+    <title>Calendario</title>
 
     <style>
         table {
@@ -46,12 +58,11 @@ $firstDay = date('N', strtotime("$year-$month-01"));
             font-weight: bold;
         }
     </style>
+
 </head>
 <body>
 
-<h2>
-    <?php echo date('F Y'); ?>
-</h2>
+<h2> Calendario de eventos</h2>
 
 <table>
     <tr>
