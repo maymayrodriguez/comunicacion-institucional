@@ -1,8 +1,5 @@
 <?php
-require_once __DIR__ . "/../logica/entidades/DiaEntidad.php";
-require_once __DIR__ . "/../logica/entidades/OrientacionEntidad.php";
-require_once __DIR__ . "/../logica/entidades/MateriaEntidad.php";
-require_once __DIR__ . "/../logica/entidades/ClaseEntidad.php";
+
 require_once __DIR__ . "/../persistencia/Conexion.php";
 
 
@@ -21,5 +18,8 @@ require_once __DIR__ . "/../persistencia/Conexion.php";
             $horarios = array();
 
         }
+
+    //Eso no va a funcionar, por favor revisen el código y no lo suban si está incompleto a menos que se agregue un comentario explicando la razón.
+    //De esta manera mantenemos el repositorio ordenado, gracias.
 
 ?>

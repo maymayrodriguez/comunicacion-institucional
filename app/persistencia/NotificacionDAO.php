@@ -6,21 +6,16 @@
     use app\logica\entidades\NotificacionEntidad;
 
     require_once __DIR__ . "\..\config\autoload.php";
-
-    $notificacion = new NotificacionEntidad(15,"Notificacion de prueba 3","Esta es una notificación de prueba","Restringido");
-    
-    $conexion = Conexion::getInstancia();
-    $notificacionDAO = new NotificacionDAO($conexion);
-
-    $notificacionDAO->insertarNotificacion($notificacion);
-    $notificacionDAO->obtenerNotificaciones();
     */
 
 
-    require_once __DIR__ . "/../logica/entidades/NotificacionEntidad.php";
     require_once __DIR__ . "/../persistencia/Conexion.php";
 
+
+    //Esta clase será modificada para que herede de DAOGenerico
+
     class NotificacionDAO {
+
 
         private Conexion $conexion;
             
@@ -75,25 +70,6 @@
             return $notificaciones;
 
         }
-
-        /*function  mostrarNotificaciones () {
-
-            $sql = "SELECT identificador, nombre, descripcion, publico FROM notificaciones";
-
-            $conexion = $this->conexion.getConexion();
-
-            $resultado = $conexion->query($sql);
-
-            while ($fila = $resultado->fetch_assoc()) {
-                echo "Identificador: " . $fila["identificador"] . "<br>";
-                echo "Nombre: " . $fila["nombre"] . "<br>";
-                echo "Descripción: " . $fila["descripcion"] . "<br>";
-                echo "Público: " . $fila["publico"] . "<br><br>";
-            }
-
-
-        }*/
-
 
         
     }
