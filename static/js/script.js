@@ -26,7 +26,6 @@ if (botonMenu){
 }
 const horarios = document.querySelector("#horarios");
 const calendario = document.querySelector("#calendario");
-const grupos = document.querySelector("#grupos");
 const notificaciones = document.querySelector("#notificaciones");
 const iniciarSesionA = document.querySelector("#iniciarSesionA");
 const cerrarSesionA = document.querySelector("#cerrarSesionA");
@@ -34,7 +33,7 @@ const indexMain = document.querySelector("#mainInicio");
 
 
 
-if (horarios && calendario && grupos && notificaciones && iniciarSesionA){
+if (horarios && calendario && notificaciones && iniciarSesionA){
 
     document.addEventListener("DOMContentLoaded", async () => {
 
@@ -64,9 +63,6 @@ if (horarios && calendario && grupos && notificaciones && iniciarSesionA){
         horarios.classList.remove("mainActivo");
         horarios.classList.add("bordeBajo");
 
-        grupos.classList.remove("mainActivo");
-        grupos.classList.add("bordeBajo");
-
         calendario.classList.remove("mainActivo");
         calendario.classList.add("bordeBajo");
 
@@ -86,9 +82,6 @@ if (horarios && calendario && grupos && notificaciones && iniciarSesionA){
 
         horarios.classList.add("mainActivo");
         horarios.classList.remove("bordeBajo");
-
-        grupos.classList.remove("mainActivo");
-        grupos.classList.add("bordeBajo");
 
         calendario.classList.remove("mainActivo");
         calendario.classList.add("bordeBajo");
@@ -110,34 +103,8 @@ if (horarios && calendario && grupos && notificaciones && iniciarSesionA){
         horarios.classList.remove("mainActivo");
         horarios.classList.add("bordeBajo");
 
-        grupos.classList.remove("mainActivo");
-        grupos.classList.add("bordeBajo");
-
         calendario.classList.add("mainActivo");
         calendario.classList.remove("bordeBajo");
-
-    });
-
-    grupos.addEventListener("click", async () => {
-
-        const respuestaGrupos = await fetch ("grupos.php");
-
-        const gruposTexto = await respuestaGrupos.text();
-
-        indexMain.innerHTML = gruposTexto;
-
-        
-        notificaciones.classList.remove("mainActivo");
-        notificaciones.classList.add("bordeBajo");
-
-        horarios.classList.remove("mainActivo");
-        horarios.classList.add("bordeBajo");
-
-        grupos.classList.add("mainActivo");
-        grupos.classList.remove("bordeBajo");
-
-        calendario.classList.remove("mainActivo");
-        calendario.classList.add("bordeBajo");
 
     });
 
@@ -155,9 +122,6 @@ if (horarios && calendario && grupos && notificaciones && iniciarSesionA){
         horarios.classList.remove("mainActivo");
         horarios.classList.add("bordeBajo");
 
-        grupos.classList.remove("mainActivo");
-        grupos.classList.add("bordeBajo");
-
         calendario.classList.remove("mainActivo");
         calendario.classList.add("bordeBajo");
 
@@ -170,15 +134,12 @@ if (horarios && calendario && grupos && notificaciones && iniciarSesionA){
         const loginTexto = await respuestaLogin.text();
 
         indexMain.innerHTML = loginTexto;
-        
+
         notificaciones.classList.remove("mainActivo");
         notificaciones.classList.add("bordeBajo");
 
         horarios.classList.remove("mainActivo");
         horarios.classList.add("bordeBajo");
-
-        grupos.classList.remove("mainActivo");
-        grupos.classList.add("bordeBajo");
 
         calendario.classList.remove("mainActivo");
         calendario.classList.add("bordeBajo");

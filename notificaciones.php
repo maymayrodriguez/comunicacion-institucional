@@ -21,7 +21,12 @@
 
 ?>
 
-    <main id = "mainNotificaciones"> 
+    <main id = "mainNotificaciones">
+        <div id="contenedorBuscadorNotificaciones">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Buscar notificaciones"></input>
+            <i class="fa-solid fa-newspaper"></i>
+        </div> 
             <div id = "contenedorNotificaciones">
                 <h2>Últimas novedades</h2>
     
