@@ -1,4 +1,8 @@
 <?php
+
+//Obtener zona horaria
+date_default_timezone_set('America/Montevideo');
+
 // Obtener el mes y año actual
 $month = date('m');
 $year = date('Y');
@@ -12,6 +16,10 @@ $daysInMonth = cal_days_in_month(
 
 // Obtener el día de la semana en el que comienza el mes
 $firstDay = date('N', strtotime("$year-$month-01"));
+
+//Este se supone que es para mostrar el nombre del mes en español, prueben a ver qué tal funciona
+setlocale(LC_TIME, 'es_ES.UTF-8');
+
 ?>
 <main>
 
