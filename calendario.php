@@ -17,17 +17,54 @@ $daysInMonth = cal_days_in_month(
 // Obtener el día de la semana en el que comienza el mes
 $firstDay = date('N', strtotime("$year-$month-01"));
 
-//Este se supone que es para mostrar el nombre del mes en español, prueben a ver qué tal funciona
-setlocale(LC_TIME, 'es_ES.UTF-8');
+//Arreglo de meses en español
+$months = [
+1=> "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+];
+
+echo "<h1>" . $months[$month] . " de " . $year . "</h1>";
 
 ?>
-<main>
 
-<h2>
-    <?php echo date('F Y'); ?>
-</h2>
+<!DOCTYPE html>
+<html lang="es_ES.UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendario</title>
 
-<table id="calendarioTabla">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th, td {
+            border: 1px solid #020202;
+            padding: 15px;
+        }
+
+        th {
+            background-color: #0B3B60;
+            color: white;
+        }
+
+        td {
+            height: 35px;
+        }
+
+        .today {
+            background-color: #17AAD2;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+
+<h2> Calendario de eventos</h2>
+
+<table>
     <tr>
         <th>Lun</th>
         <th>Mar</th>
@@ -60,4 +97,5 @@ setlocale(LC_TIME, 'es_ES.UTF-8');
     </tr>
 </table>
 
-</main>
+</body>
+</html>
