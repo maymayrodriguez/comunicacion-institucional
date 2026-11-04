@@ -16,19 +16,26 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit;
     } 
 
-    $usuario = $servicioUsuario->iniciarSesion($correoElectronico, $contrasenia);
+    $datosUsuario = $servicioUsuario->iniciarSesion($correoElectronico, $contrasenia);
     
 
-    session_start();
 
-    if ($usuario !== null){
+    if ($datosUsuario !== null){
         
+        session_start();
+
     
-        $_SESSION["correoElectronico"] = $usuario->getCorreoElectronico();
+        $_SESSION["correoElectronico"] = $datosUsuario["correoElectronico"];
 
-        $_SESSION["nombre"] = $usuario->getNombre();
+        $_SESSION["nombre"] = $datosUsuario["nombre"];
 
-        $_SESSION["rol"] = $usuario->getRol();
+        $_SESSION["rol"] = $datosUsuario["rol"];
+
+        if ($datosUsuario["rol"] === "estudiante") {
+        
+            $_SESSION["grupo"] = $datosUsuario["grupo"];
+
+        }
 
         header("Location: ../../index.php");
         exit;
