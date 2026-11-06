@@ -27,7 +27,9 @@
             <i class="fa-solid fa-magnifying-glass"></i>
             <input type="text" placeholder="Buscar notificaciones"></input>
             <i class="fa-solid fa-newspaper"></i>
+            <button id="IngresarNotificacion" onclick="window.location.href='crearNotificacion.php';">Agregar Notificacion</button>
         </div> 
+
             <div id = "contenedorNotificaciones">
                 <h2>Últimas novedades</h2>
     
